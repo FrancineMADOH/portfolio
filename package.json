@@ -10,7 +10,9 @@
     "test2": "ENV=test && npx tsc && db-migrate --env test up && jasmine && db-migrate db:drop test",
     "test": "npm run build && db-migrate up && jasmine",
     "test3": "ENV=test db-migrate --env test up && jasmine-ts && db-migrate db:drop test",
-    "migrate": "db-migrate --env test up && db-migrate up"
+    "migrate": "db-migrate --env test up && db-migrate up",
+    "up": "db-migrate up",
+    "down": "db-migrate down"
   },
   "repository": {
     "type": "git",
