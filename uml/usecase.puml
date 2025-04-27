@@ -1,0 +1,42 @@
+@startuml Portfolio
+
+left to right direction 
+
+actor Admin as admin 
+actor User as user
+
+
+rectangle Portfolio {
+
+    usecase "Creer Admin" as signup 
+    usecase "Se Connecter" as signin 
+    usecase "Creer Projet" as cp 
+    usecase "Modifier Projet" as mp
+    usecase "Voir Projet" as  vp 
+    usecase "Supprimer Projet" as sp 
+    usecase "Contact Me" as con
+}
+
+' usecases 
+
+admin -- vp 
+user -- vp 
+admin -- signup 
+admin -- signin
+admin -- cp 
+admin -- mp 
+admin -- sp 
+user -- con 
+
+' Relations
+
+signin -- signup : <<include>> 
+cp -- signin : <<include>> 
+mp -- signin : <<include>>
+sp -- signin : <<include>> 
+con -- vp : <<extend>> 
+
+note top of admin : Administrateur avec droit d'acces 
+note bottom of  user: Recruteur ou Client 
+
+@enduml

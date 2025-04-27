@@ -1,0 +1,38 @@
+@startuml Portfolio 
+
+actor "Utilisateur"  as u 
+participant "Navigateur"  as n
+participant "Serveur " as s  
+participant "Base de donnes"  as bd
+
+
+u -> n : Saisit l'URL
+activate n 
+n -> s : GET /acceuil 
+activate s 
+s -> bd : SELECT * projects
+activate bd 
+bd --> s : Liste des projets 
+deactivate bd 
+s --> n : charge la liste des produits 
+deactivate s 
+n --> u : Affiche la page 
+u -> n : Contacte le dev
+
+activate s 
+n -> s : GET /contact 
+s --> n : Charge la page de contact 
+u -> n : Envoie son message 
+n -> s : Envoie la requete au serveur
+s --> n: Verifie la conformite
+s --> n: Renvoi sa reponse 
+
+deactivate s 
+
+n --> u: Informe le user(failed/succed)
+
+deactivate n
+
+
+
+@enduml 

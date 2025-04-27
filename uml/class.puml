@@ -1,0 +1,34 @@
+@startuml Portfolio 
+
+class User {
+    + id : int 
+    + email : string 
+    + password : string 
+    + createdAt: Datetime
+
+    + createUser()
+    + signinUser()
+}
+
+class Project {
+    + id : int 
+    + title : string 
+    + description : string
+    + technologies: string 
+    + lien : string 
+    + createAt : Datetime
+
+    + createProject()
+    + updateProject()
+    + viewProject()
+    + deleteProject() 
+}
+
+class Visiteur {
+    + sessionId: string
+}
+
+User "1" -- "*" Project : creer
+
+
+@enduml

@@ -1,0 +1,18 @@
+@startuml SendMessage 
+
+(*) --> Contacter Dev 
+if "Tous les champ rempli ?" then 
+
+--> [Oui]  SanitizeMessage 
+ SanitizeMessage --> EnvoyerMessage 
+ EnvoyerMessage --> (*)
+
+else 
+--> [Non] InformerUtilisateur
+InformerUtilisateur --> (*)
+
+endif 
+
+
+
+@enduml
