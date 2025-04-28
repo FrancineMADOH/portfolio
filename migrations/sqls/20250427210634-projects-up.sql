@@ -4,7 +4,7 @@ CREATE TABLE projects(
     description TEXT,
     technologies TEXT,
     lien  VARCHAR(255) ,
-    createAt TIMESTAMP WITH TIME ZONE,
+    createAt TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     createdBy INT NOT NULL,
 
     FOREIGN KEY(createdBy) REFERENCES users(id) ON DELETE CASCADE

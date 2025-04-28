@@ -8,7 +8,7 @@ export type  User = {
     id?:Number;
     email: string;
     password:string;
-    createAt:Date;
+    createAt?:Date;
 }
 
 const  {
@@ -56,6 +56,20 @@ export class UserStore {
             throw new Error(`Failed to signin ${error}`);
             
         }
+    }
+
+    async getUser(email:string):Promise<User>{
+       try {
+        const conn = await client.connect();
+        const sql = "SELECT * FROM users WHERE email=$1;";
+        const result = await client.query(sql,[email]);
+        conn.release();
+        return result.rows[0]
+        
+       } catch (error) {
+        throw new Error(`Failed to fecth user ${error}`)
+        
+       }
     }
 
 }

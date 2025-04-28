@@ -7,6 +7,7 @@ export type Project = {
     description:string;
     technologies :string
     lien:string;
+    createdBy:number;
 }
 
 export class ProjectStore{
@@ -14,8 +15,8 @@ export class ProjectStore{
     async create(p:Project):Promise<Project>{
         try {
             const conn = await client.connect()
-            const sql = "INSERT INTO projects(title,description,technologies,lien) VALUES($1,$2,$3,$4) RETURNING *;"
-            const result = await conn.query(sql,[p.title,p.description,p.technologies,p.technologies]);
+            const sql = "INSERT INTO projects(title,description,technologies,lien,createdBy) VALUES($1,$2,$3,$4,$5) RETURNING *;"
+            const result = await conn.query(sql,[p.title,p.description,p.technologies,p.lien,p.createdBy]);
             
             const data = result.rows[0]
             conn.release();
@@ -31,7 +32,7 @@ export class ProjectStore{
     async update(p:Project):Promise<Project>{
         try {
             const conn = await client.connect();
-            const sql = "UPDATE projects SET title=$1, description=$2,technologies=$3,lien=$4 WHERE id $=$5 RETURNING *;";
+            const sql = "UPDATE projects SET title=$1, description=$2,technologies=$3,lien=$4 WHERE id=$5 RETURNING *;";
             const result = await conn.query(sql, [p.title,p.description,p.technologies,p.lien,p.id]);
             conn.release();
             return result.rows[0];
@@ -42,7 +43,7 @@ export class ProjectStore{
         }
     }
 
-    async index(p:Project):Promise<Project[]>{
+    async index():Promise<Project[]>{
         try {
             const conn = await client.connect();
             const sql = "SELECT * FROM projects;";

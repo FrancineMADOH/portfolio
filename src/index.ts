@@ -12,10 +12,13 @@ const corsOptions = {
     origin:process.env.DOMAIN,
     optionSuccessStatus:200
 }
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 //call the api route
 app.use('/api', router);
 
-app.use(bodyParser.json());
+
 app.use(cors(corsOptions));
 
 

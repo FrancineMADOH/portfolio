@@ -1,25 +1,33 @@
 import express, {Request, Response} from "express";
+import { ProjectHandler } from "../handlers/projectHandler";
 
-const router = express.Router()
+const router = express.Router();
+const methods = new ProjectHandler();
 
 //createuser 
 
-router.post('/user/create',(req:Request, res:Response)=>{})
+router.post('/user/create', methods.create)
 
 // signin user 
-router.get('/',(req:Request, res:Response)=>{})
+router.post('/user/login',methods.signin)
 
 //create projet 
-router.post('/',(req:Request, res:Response)=>{})
+router.post('/project/create',methods.createProject)
 
 //update project 
-router.put('/',(req:Request, res:Response)=>{})
+router.patch('/project/update',methods.updateProject)
+
+//get project list 
+router.get('/project/all', methods.getProjectList)
+
+//get one project 
+router.get('/project', methods.getProject)
 
 // delete project 
-router.delete('/',(req:Request, res:Response)=>{})
+router.delete('/project/delete',methods.deleteProject)
 
 // contact dev 
-router.post('/',(req:Request, res:Response)=>{})
+router.post('/user/contact',methods.sendEmail)
 
 
 
