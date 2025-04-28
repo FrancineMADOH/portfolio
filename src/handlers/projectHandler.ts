@@ -2,6 +2,7 @@ import express , {Request,Response} from "express";
 import { Project, ProjectStore } from "../models/project";
 import { User, UserStore } from "../models/user";
 import { sendEmail } from "../utils/email";
+import { generateAuthToken } from "../utils/jwt";
 
 
 const user = new UserStore();
@@ -14,9 +15,7 @@ export class ProjectHandler {
     async  create(req:Request,res:Response){
 
         const data = req.body;
-        console.log(data);
         const checkadmin = await user.getUser(req.body.email);
-        console.log(typeof(checkadmin))
 
         try {
 
@@ -28,11 +27,12 @@ export class ProjectHandler {
                     password: req.body.password
                 }
                 await user.create(u);
-                res.status(201).json({message:"New user created"})   
+                res.status(201).json({message:"New user created",})   
             }
             
         } catch (error) {
             console.log(error);
+            res.status(500).json({message:"Internal Server Error"})
             
         }
     }
@@ -44,7 +44,8 @@ export class ProjectHandler {
             const data = req.body;
             const admin = await user.authenticate(data.email,data.password);
             if(admin){
-                res.status(200).json({message:"Sucessfully login"});
+                const token = generateAuthToken({user:data.email, id:data.id})
+                res.status(200).json({message:"Sucessfully login",token: token,id:data.id});
             }else{
                 res.status(200).json({message: "Wrong credentials"})
             }
@@ -148,6 +149,16 @@ export class ProjectHandler {
     }
 
     // signout 
+
+    async signOut(req:Request,res:Response){
+        try {
+            res.status(200).json({message: "Successfully Signout !"})    
+        } catch (error) {
+            console.log(error)
+            res.status(500).json({message: "Internal server error"});
+            
+        }
+    }
 
 
 }
