@@ -1,0 +1,18 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+:root {
+  --bg-primary: #111827;
+  --bg-card: #1f2937;
+  --text-primary: #f9fafb;
+  --text-muted: #9ca3af;
+  --accent: #e63946;
+  --accent-hover: #c1121f;
+  --border: #374151;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+}
+

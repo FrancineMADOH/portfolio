@@ -1,0 +1,45 @@
+{
+  "nav": {
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "cta_projects": "View my projects",
+    "cta_github": "GitHub"
+  },
+  "skills": {
+    "title": "Skills",
+    "backend": "Backend",
+    "python_odoo": "Python / Odoo",
+    "mobile": "Mobile",
+    "ia": "AI"
+  },
+  "projects": {
+    "title": "My Projects",
+    "subtitle": "A selection of my recent work.",
+    "filter_all": "All",
+    "view_project": "View project",
+    "empty": "No projects in this category."
+  },
+  "contact": {
+    "title": "Contact me",
+    "subtitle": "Let's discuss your needs or a collaboration.",
+    "label_email": "Email address",
+    "placeholder_email": "e.g. contact@mail.com",
+    "label_message": "Your message",
+    "placeholder_message": "Write your message…",
+    "send": "Send",
+    "sending": "Sending…",
+    "success": "Message sent! I'll get back to you within 48 hours.",
+    "error": "Error sending. Please try again or contact me directly.",
+    "err_email_required": "Email is required.",
+    "err_email_invalid": "Invalid email format.",
+    "err_msg_required": "Message is required.",
+    "err_msg_minlength": "At least 10 characters."
+  },
+  "footer": {
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  }
+}

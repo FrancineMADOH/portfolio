@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "NoMoreSilent",
+    "description": "Plateforme de signalement anonyme de violences domestiques au Cameroun. Chatbot IA empathique (routing multi-LLM) qui génère des rapports envoyés aux ONG et services sociaux selon la géolocalisation.",
+    "description_en": "Anonymous reporting platform for domestic violence in Cameroon. Empathetic AI chatbot (multi-LLM routing) that generates reports sent to NGOs and social services based on geolocation.",
+    "technologies": "TypeScript · Express · Angular · PostgreSQL · Anthropic SDK · Gemini · Groq · Ollama · Docker",
+    "category": "Fullstack + IA",
+    "github": "https://github.com/FrancineMADOH/nomoresilent",
+    "lien": "https://nomoresilent.brightwill.org/"
+  },
+  {
+    "id": 2,
+    "title": "Kleanet SaaS pressing",
+    "description": "Architecture SaaS 3 couches : API Fastify/TypeScript (JWT, Redis, Firebase, Zod, Docker) + module Odoo back-office + application mobile Flutter cliente Android/iOS.",
+    "description_en": "3-layer SaaS architecture: Fastify/TypeScript API (JWT, Redis, Firebase, Zod, Docker) + Odoo back-office module + Flutter mobile client app for Android/iOS.",
+    "technologies": "TypeScript · Fastify v5 · Redis · Firebase · Flutter · Dart · Odoo · Docker",
+    "category": "Fullstack",
+    "github": "https://github.com/FrancineMADOH/kleanet_api",
+    "lien": "https://bw-dev-services.brightwill.org/"
+  },
+  {
+    "id": 3,
+    "title": "BrightFret Tracking fret mobile",
+    "description": "Application Flutter de tracking de fret international (Chine → Afrique). Riverpod, Hive offline-first, QR scanning, deep links, i18n FR/EN.",
+    "description_en": "Flutter app for tracking international freight (China to Africa). Riverpod, offline-first with Hive, QR scanning, deep links, FR/EN i18n.",
+    "technologies": "Flutter · Dart · Riverpod · Hive · Dio · Firebase",
+    "category": "Mobile",
+    "github": "https://github.com/FrancineMADOH/BrightFret",
+    "lien": "https://github.com/FrancineMADOH/BrightFret"
+  },
+  {
+    "id": 4,
+    "title": "VLCAM Plateforme touristique",
+    "description": "Suite de 3 modules Odoo pour la plateforme touristique VLCAM (Visiter Le Cameroun Avec Moi) : gestion des circuits touristiques avec réservation en ligne, hébergements et location de véhicules. Publication web intégrée, avis clients, conversion automatique en devis.",
+    "description_en": "Suite of 3 Odoo modules for the VLCAM tourism platform (Visit Cameroon With Me): tour circuit management with online booking, accommodations and vehicle rentals. Integrated web publishing, customer reviews, automatic quote conversion.",
+    "technologies": "Python · Odoo · XML · QWeb · JavaScript · SCSS",
+    "category": "Odoo / Python",
+    "github": "https://github.com/FrancineMADOH",
+    "lien": "https://basetest.vlcam.org/"
+  },
+  {
+    "id": 5,
+    "title": "Franny Beauty Réservation beauté",
+    "description": "Module Odoo complet pour une plateforme de réservation de prestations beauté : landing page responsive, gestion des prestataires, avis clients, emails automatiques, back-office administration.",
+    "description_en": "Complete Odoo module for a beauty service booking platform: responsive landing page, provider management, customer reviews, automated emails, administration back-office.",
+    "technologies": "Python · Odoo 19 · XML · QWeb · JavaScript · SCSS",
+    "category": "Odoo / Python",
+    "github": "https://github.com/FrancineMADOH",
+    "lien": "https://isfranny.net"
+  },
+  {
+    "id": 6,
+    "title": "Mungoum Calendrier Nguemba",
+    "description": "Application mobile Flutter préservant le calendrier traditionnel Nguemba (cycle de 8 jours du peuple Bamiléké). Localisation multi-langue, monétisation AdMob.",
+    "description_en": "Flutter mobile app preserving the traditional Nguemba calendar (8-day cycle of the Bamiléké people). Multi-language localization, AdMob monetization.",
+    "technologies": "Flutter · Dart · AdMob · go_router · intl",
+    "category": "Mobile",
+    "github": "https://github.com/FrancineMADOH/mungoum",
+    "lien": "https://github.com/FrancineMADOH/mungoum"
+  }
+]

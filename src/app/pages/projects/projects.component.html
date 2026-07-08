@@ -1,0 +1,243 @@
+<app-navbar></app-navbar>
+
+
+<!-- Section 1 : Hero -->
+<section class="hero py-5">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <div class="col-12 col-md-4 col-lg-3">
+        <div class="p-3">
+          <img src="./profile.jpeg" alt="Photo de Francine MADOH" class="img-fluid rounded">
+        </div>
+      </div>
+
+      <div class="col-12 col-md-8 col-lg-9">
+        <div class="intro">
+          <h1 class="display-6 fw-bold mb-1" style="color: var(--accent);">{{ name }}</h1>
+          <h2 class="h5 fw-semibold mb-3" style="color: var(--text-muted);">{{ title }}</h2>
+          <p class="lead mb-4">{{ summary }}</p>
+
+          <div class="actions d-flex flex-wrap gap-2">
+            <a class="btn" href="#projets" style="background: var(--accent); color: #fff;">{{ 'hero.cta_projects' | translate }}</a>
+            <a class="btn" [href]="githubUrl" target="_blank" rel="noopener"
+               style="border: 1px solid var(--border); color: var(--text-primary);">{{ 'hero.cta_github' | translate }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Section Compétences -->
+<section id="competences" class="py-5" style="border-top: 1px solid var(--border);">
+  <div class="container">
+    <h3 class="fw-bold mb-5 text-center" style="color: var(--accent);">{{ 'skills.title' | translate }}</h3>
+
+    <div class="d-flex flex-column gap-4">
+
+      <div>
+        <p class="fw-semibold mb-2 text-uppercase small" style="color: var(--text-muted);">{{ 'skills.backend' | translate }}</p>
+        <div class="d-flex flex-wrap gap-2">
+          <span class="badge rounded-pill px-3 py-2" style="background: var(--border); color: var(--text-primary); font-size: 0.85rem;">TypeScript</span>
+          <span class="badge rounded-pill px-3 py-2" style="background: var(--border); color: var(--text-primary); font-size: 0.85rem;">Node.js</span>
+          <span class="badge rounded-pill px-3 py-2" style="background: var(--border); color: var(--text-primary); font-size: 0.85rem;">Fastify</span>
+          <span class="badge rounded-pill px-3 py-2" style="background: var(--border); color: var(--text-primary); font-size: 0.85rem;">Express</span>
+          <span class="badge rounded-pill px-3 py-2" style="background: var(--border); color: var(--text-primary); font-size: 0.85rem;">PostgreSQL</span>
+          <span class="badge rounded-pill px-3 py-2" style="background: var(--border); color: var(--text-primary); font-size: 0.85rem;">REST APIs</span>
+        </div>
+      </div>
+
+      <div>
+        <p class="fw-semibold mb-2 text-uppercase small" style="color: var(--text-muted);">{{ 'skills.python_odoo' | translate }}</p>
+        <div class="d-flex flex-wrap gap-2">
+          <span class="badge rounded-pill px-3 py-2" style="background: var(--border); color: var(--text-primary); font-size: 0.85rem;">Python</span>
+          <span class="badge rounded-pill px-3 py-2" style="background: var(--border); color: var(--text-primary); font-size: 0.85rem;">Odoo 17/19</span>
+          <span class="badge rounded-pill px-3 py-2" style="background: var(--border); color: var(--text-primary); font-size: 0.85rem;">XML</span>
+          <span class="badge rounded-pill px-3 py-2" style="background: var(--border); color: var(--text-primary); font-size: 0.85rem;">QWeb</span>
+          <span class="badge rounded-pill px-3 py-2" style="background: var(--border); color: var(--text-primary); font-size: 0.85rem;">SQL</span>
+        </div>
+      </div>
+
+      <div>
+        <p class="fw-semibold mb-2 text-uppercase small" style="color: var(--text-muted);">{{ 'skills.ia' | translate }}</p>
+        <div class="d-flex flex-wrap gap-2">
+          <span class="badge rounded-pill px-3 py-2" style="background: var(--border); color: var(--text-primary); font-size: 0.85rem;">Claude Code</span>
+          <span class="badge rounded-pill px-3 py-2" style="background: var(--border); color: var(--text-primary); font-size: 0.85rem;">DIFY</span>
+          <span class="badge rounded-pill px-3 py-2" style="background: var(--border); color: var(--text-primary); font-size: 0.85rem;">Anthropic SDK</span>
+          <span class="badge rounded-pill px-3 py-2" style="background: var(--border); color: var(--text-primary); font-size: 0.85rem;">Prompt Engineering</span>
+          <span class="badge rounded-pill px-3 py-2" style="background: var(--border); color: var(--text-primary); font-size: 0.85rem;">n8n</span>
+        </div>
+      </div>
+
+      <div>
+        <p class="fw-semibold mb-2 text-uppercase small" style="color: var(--text-muted);">{{ 'skills.mobile' | translate }}</p>
+        <div class="d-flex flex-wrap gap-2">
+          <span class="badge rounded-pill px-3 py-2" style="background: var(--border); color: var(--text-primary); font-size: 0.85rem;">Flutter</span>
+          <span class="badge rounded-pill px-3 py-2" style="background: var(--border); color: var(--text-primary); font-size: 0.85rem;">Dart</span>
+          <span class="badge rounded-pill px-3 py-2" style="background: var(--border); color: var(--text-primary); font-size: 0.85rem;">Firebase</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Section 2 : Projets -->
+<section id="projets" class="py-5" style="border-top: 1px solid var(--border);">
+  <div class="container">
+    <h3 class="fw-bold mb-2 text-center" style="color: var(--accent);">{{ 'projects.title' | translate }}</h3>
+    <p class="text-center mb-4" style="color: var(--text-muted);">{{ 'projects.subtitle' | translate }}</p>
+
+    <!-- Filtres -->
+    <div class="d-flex flex-wrap gap-2 justify-content-center mb-5">
+      <button
+        *ngFor="let cat of categories"
+        (click)="setFilter(cat)"
+        class="btn btn-sm filter-btn"
+        [class.active]="selectedCategory() === cat">
+        {{ cat === '__all__' ? ('projects.filter_all' | translate) : cat }}
+      </button>
+    </div>
+
+    <!-- Erreur -->
+    <div *ngIf="errorMsg()" class="p-3 rounded mb-3" role="alert"
+         style="background: #2d0e0e; border: 1px solid #991b1b; color: #fca5a5;">
+      {{ errorMsg() }}
+    </div>
+
+    <!-- Loading -->
+    <div *ngIf="loading()" class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3">
+      <div class="col" *ngFor="let i of [1,2,3,4,5,6]">
+        <div class="h-100 p-3 placeholder-glow"
+             style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px;">
+          <div class="mb-3" style="height:140px; background: var(--border); border-radius: 6px;"></div>
+          <span class="placeholder col-7 mb-2 d-block"></span>
+          <span class="placeholder col-12 mb-1 d-block"></span>
+          <span class="placeholder col-10 d-block"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grille -->
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3"
+         *ngIf="!loading() && !errorMsg() && filteredProjects().length">
+      <div class="col" *ngFor="let p of filteredProjects(); trackBy: trackByProject">
+        <article class="h-100 d-flex flex-column"
+                 style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; overflow: hidden;">
+
+          <!-- Bloc initiales + badge catégorie -->
+          <div class="position-relative"
+               style="height:140px; background: var(--accent); display:flex; align-items:center; justify-content:center;">
+            <span style="color:#fff; font-size:2.5rem; font-weight:700; letter-spacing:2px;">
+              {{ p.title.substring(0, 2).toUpperCase() }}
+            </span>
+            <span class="position-absolute top-0 end-0 m-2 badge rounded-pill"
+                  style="background: rgba(0,0,0,0.35); color:#fff; font-size:0.72rem;">
+              {{ p.category }}
+            </span>
+          </div>
+
+          <!-- Corps -->
+          <div class="d-flex flex-column flex-grow-1 p-3">
+            <h4 class="fw-bold mb-2" style="color: var(--text-primary);">{{ p.title }}</h4>
+            <p class="mb-3" style="color: var(--text-muted); font-size:0.9rem; text-align:justify;">
+              {{ getDescription(p) }}
+            </p>
+
+            <!-- Tech badges -->
+            <div class="d-flex flex-wrap gap-1 mb-3">
+              <span *ngFor="let tech of getTechList(p.technologies)"
+                    class="badge rounded-pill px-2 py-1"
+                    style="background: var(--border); color: var(--text-primary); font-size:0.72rem;">
+                {{ tech }}
+              </span>
+            </div>
+
+            <!-- Boutons -->
+            <div class="mt-auto d-flex gap-2">
+              <a [href]="p.github" target="_blank" rel="noopener"
+                 class="btn btn-sm"
+                 style="border: 1px solid var(--accent); color: var(--accent);">
+                GitHub
+              </a>
+              <a [href]="p.lien" target="_blank" rel="noopener"
+                 class="btn btn-sm"
+                 style="background: var(--accent); color:#fff; border:none;">
+                {{ 'projects.view_project' | translate }}
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- État vide -->
+    <p class="text-center fst-italic mt-3"
+       *ngIf="!loading() && !errorMsg() && filteredProjects().length === 0"
+       style="color: var(--text-muted);">
+      {{ 'projects.empty' | translate }}
+    </p>
+  </div>
+</section>
+
+
+<!-- Section 3 : Contact -->
+<section id="contact" class="py-5" style="border-top: 1px solid var(--border);">
+  <div class="container">
+    <h3 class="fw-bold mb-2 text-center" style="color: var(--accent);">{{ 'contact.title' | translate }}</h3>
+    <p class="text-center mb-5" style="color: var(--text-muted);">{{ 'contact.subtitle' | translate }}</p>
+
+    <div class="d-flex justify-content-center">
+      <form [formGroup]="contactForm" (ngSubmit)="submitContact()" novalidate
+            style="width: 100%; max-width: 560px;">
+
+        <!-- Succès -->
+        <div *ngIf="contactSuccess()" class="mb-3 p-3 rounded"
+             style="background: #052e16; border: 1px solid #166534; color: #86efac;" role="status" aria-live="polite">
+          {{ contactSuccess() }}
+        </div>
+
+        <!-- Erreur -->
+        <div *ngIf="contactError()" class="mb-3 p-3 rounded"
+             style="background: #2d0e0e; border: 1px solid #991b1b; color: #fca5a5;" role="alert">
+          {{ contactError() }}
+        </div>
+
+        <div class="mb-3">
+          <label for="cEmail" class="form-label fw-semibold" style="color: var(--text-primary);">{{ 'contact.label_email' | translate }}</label>
+          <input id="cEmail" type="email" autocomplete="email" formControlName="email"
+                 [placeholder]="'contact.placeholder_email' | translate"
+                 class="form-control fm-input"
+                 [ngClass]="{'is-invalid': c['email'].touched && c['email'].invalid}"
+                 aria-describedby="cEmailError" />
+          <div id="cEmailError" class="invalid-feedback" *ngIf="c['email'].touched && c['email'].invalid">
+            <span *ngIf="c['email'].errors?.['required']">{{ 'contact.err_email_required' | translate }}</span>
+            <span *ngIf="c['email'].errors?.['email']">{{ 'contact.err_email_invalid' | translate }}</span>
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <label for="cMessage" class="form-label fw-semibold" style="color: var(--text-primary);">{{ 'contact.label_message' | translate }}</label>
+          <textarea id="cMessage" rows="6" formControlName="message"
+                    [placeholder]="'contact.placeholder_message' | translate"
+                    class="form-control fm-input"
+                    [ngClass]="{'is-invalid': c['message'].touched && c['message'].invalid}"
+                    aria-describedby="cMessageError"></textarea>
+          <div id="cMessageError" class="invalid-feedback" *ngIf="c['message'].touched && c['message'].invalid">
+            <span *ngIf="c['message'].errors?.['required']">{{ 'contact.err_msg_required' | translate }}</span>
+            <span *ngIf="c['message'].errors?.['minlength']">{{ 'contact.err_msg_minlength' | translate }}</span>
+          </div>
+        </div>
+
+        <button type="submit" class="btn w-100" [disabled]="contactSending()"
+                style="background: var(--accent); color: #fff; border: none;">
+          {{ contactSending() ? ('contact.sending' | translate) : ('contact.send' | translate) }}
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>

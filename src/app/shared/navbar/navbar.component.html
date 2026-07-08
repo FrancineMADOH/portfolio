@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg sticky-top" style="background: var(--bg-primary); border-bottom: 1px solid var(--border);">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="/" style="color: var(--accent);">FM</a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mainNav"
+      aria-controls="mainNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      style="border-color: var(--border);">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+        <li class="nav-item">
+          <a class="nav-link" href="#competences" style="color: var(--text-primary);">{{ 'nav.skills' | translate }}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#projets" style="color: var(--text-primary);">{{ 'nav.projects' | translate }}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact" style="color: var(--text-primary);">{{ 'nav.contact' | translate }}</a>
+        </li>
+        <li class="nav-item ms-lg-3">
+          <button
+            (click)="lang.toggle()"
+            class="btn btn-sm fw-bold"
+            style="border: 1px solid var(--border); color: var(--text-primary); background: transparent; min-width: 60px;">
+            {{ lang.currentLang() === 'fr' ? 'EN' : 'FR' }}
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
