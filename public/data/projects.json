@@ -12,9 +12,9 @@
   {
     "id": 2,
     "title": "Kleanet SaaS pressing",
-    "description": "Architecture SaaS 3 couches : API Fastify/TypeScript (JWT, Redis, Firebase, Zod, Docker) + module Odoo back-office + application mobile Flutter cliente Android/iOS.",
-    "description_en": "3-layer SaaS architecture: Fastify/TypeScript API (JWT, Redis, Firebase, Zod, Docker) + Odoo back-office module + Flutter mobile client app for Android/iOS.",
-    "technologies": "TypeScript · Fastify v5 · Redis · Firebase · Flutter · Dart · Odoo · Docker",
+    "description": "SaaS 3 couches pour pressing : module Odoo back-office (commandes, abonnements, rendez-vous collecte/livraison, règles tarifaires, suivi commande en ligne, notifications email/SMS Twilio, feedbacks, FAQ, reçus PDF, dashboard admin) + API Fastify/TypeScript (JWT, Redis, Firebase, Zod) + application mobile Flutter Android/iOS.",
+    "description_en": "3-layer SaaS for laundry services: Odoo back-office module (orders, subscriptions, pickup/delivery appointments, pricing rules, online order tracking, email/SMS Twilio notifications, customer feedback, FAQ, PDF receipts, admin dashboard) + Fastify/TypeScript API (JWT, Redis, Firebase, Zod) + Flutter mobile app for Android/iOS.",
+    "technologies": "TypeScript · Fastify v5 · Redis · Firebase · Flutter · Dart · Odoo ",
     "category": "Fullstack",
     "github": "https://github.com/FrancineMADOH/kleanet_api",
     "lien": "https://bw-dev-services.brightwill.org/"
@@ -22,10 +22,10 @@
   {
     "id": 3,
     "title": "BrightFret Tracking fret mobile",
-    "description": "Application Flutter de tracking de fret international (Chine → Afrique). Riverpod, Hive offline-first, QR scanning, deep links, i18n FR/EN.",
-    "description_en": "Flutter app for tracking international freight (China to Africa). Riverpod, offline-first with Hive, QR scanning, deep links, FR/EN i18n.",
-    "technologies": "Flutter · Dart · Riverpod · Hive · Dio · Firebase",
-    "category": "Mobile",
+    "description": "Solution fullstack pour transitaires Chine/Afrique. Module Odoo back-office : cycle complet des expéditions (air/mer), bordereaux, réclamations, étapes de transit, notifications email/SMS, page de tracking publique, rapports PDF. Application mobile Flutter (Riverpod, Hive offline-first, QR scan, i18n FR/EN) consommant l'API Odoo.",
+    "description_en": "Full-stack solution for China–Africa freight forwarders. Odoo back-office module: complete shipment lifecycle (air/sea), bordereaux, claims, transit stages, email/SMS notifications, public tracking page, PDF reports. Flutter mobile app (Riverpod, Hive offline-first, QR scan, FR/EN i18n) consuming the Odoo API.",
+    "technologies": "Python · Odoo 19 · Flutter · Dart · Riverpod · Hive · Dio · Firebase",
+    "category": "Fullstack",
     "github": "https://github.com/FrancineMADOH/BrightFret",
     "lien": "https://github.com/FrancineMADOH/BrightFret"
   },
