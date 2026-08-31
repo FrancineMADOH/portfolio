@@ -41,13 +41,13 @@
   },
   {
     "id": 5,
-    "title": "Franny Beauty Réservation beauté",
-    "description": "Module Odoo complet pour une plateforme de réservation de prestations beauté : landing page responsive, gestion des prestataires, avis clients, emails automatiques, back-office administration.",
-    "description_en": "Complete Odoo module for a beauty service booking platform: responsive landing page, provider management, customer reviews, automated emails, administration back-office.",
-    "technologies": "Python · Odoo 19 · XML · QWeb · JavaScript · SCSS",
+    "title": "Brightwill Plateforme ERP gérée",
+    "description": "Plateforme SaaS tout-en-un pour PME en croissance : ERP géré (point de vente, gestion commerciale, facturation automatisée, inventaire temps réel, site e-commerce), module BrightFret de suivi logistique (tracking temps réel, étiquettes QR code, chronologie de transit) et développement sur mesure (sites web, apps mobiles, intégrations). Tarification SaaS par paliers (Starter/Growth/Scale).",
+    "description_en": "All-in-one SaaS platform for growing SMEs: managed ERP (point of sale, sales management, automated invoicing, real-time inventory, e-commerce site), BrightFret logistics tracking module (real-time shipment tracking, QR code labels, transit timeline), and custom development (websites, mobile apps, integrations). Tiered SaaS pricing (Starter/Growth/Scale).",
+    "technologies": "Python · Odoo 19 · XML · QWeb · JavaScript · CSS · SCSS",
     "category": "Odoo / Python",
     "github": "https://github.com/FrancineMADOH",
-    "lien": "https://isfranny.net"
+    "lien": "https://brightwill.org/fr"
   },
   {
     "id": 6,

@@ -45,3 +45,4 @@ public/
 ├── i18n/fr.json             # Traductions françaises
 └── i18n/en.json             # Traductions anglaises
 ```
+rsync -avz --delete dist/francinemadoh/browser/ root@212.132.114.37:/var/www/francinemadoh/
