@@ -70,6 +70,20 @@
     "play_badge_alt": "Disponible sur Google Play"
   },
   "case_study": {
-    "key_figures": "Chiffres clés"
+    "key_figures": "Chiffres clés",
+    "toc": "Sur cette page",
+    "context": "Contexte",
+    "diagnosis": "Diagnostic",
+    "solution": "Solution",
+    "deliverables": "Livrables",
+    "results": "Résultats",
+    "gallery": "Captures",
+    "stack": "Stack technique",
+    "type_doc": "Document",
+    "type_app": "Application",
+    "type_module": "Module",
+    "type_site": "Site web",
+    "enlarge": "Agrandir la capture :",
+    "close": "Fermer"
   }
 }

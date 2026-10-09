@@ -70,6 +70,20 @@
     "play_badge_alt": "Get it on Google Play"
   },
   "case_study": {
-    "key_figures": "Key figures"
+    "key_figures": "Key figures",
+    "toc": "On this page",
+    "context": "Context",
+    "diagnosis": "Diagnosis",
+    "solution": "Solution",
+    "deliverables": "Deliverables",
+    "results": "Results",
+    "gallery": "Screenshots",
+    "stack": "Tech stack",
+    "type_doc": "Document",
+    "type_app": "App",
+    "type_module": "Module",
+    "type_site": "Website",
+    "enlarge": "Enlarge screenshot:",
+    "close": "Close"
   }
 }

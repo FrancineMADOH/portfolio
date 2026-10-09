@@ -51,5 +51,92 @@
         }
       </section>
     }
+
+    @if (sections().length) {
+      <div class="case-body">
+        <nav class="case-toc" [attr.aria-label]="'case_study.toc' | translate">
+          <p class="case-toc__title">{{ 'case_study.toc' | translate }}</p>
+          <ol>
+            @for (s of sections(); track s.id) {
+              <li><a [routerLink]="[]" [fragment]="s.id">{{ s.labelKey | translate }}</a></li>
+            }
+          </ol>
+        </nav>
+
+        <div class="case-content">
+          @if (has('contexte')) {
+            <section id="contexte" class="case-section">
+              <h2>{{ 'case_study.context' | translate }}</h2>
+              <p>{{ lang.localize(p.context) }}</p>
+            </section>
+          }
+
+          @if (has('diagnostic')) {
+            <section id="diagnostic" class="case-section">
+              <h2>{{ 'case_study.diagnosis' | translate }}</h2>
+              <ol class="steps">
+                @for (item of p.diagnosis; track item.fr) {
+                  <li>{{ lang.localize(item) }}</li>
+                }
+              </ol>
+            </section>
+          }
+
+          @if (has('solution')) {
+            <section id="solution" class="case-section">
+              <h2>{{ 'case_study.solution' | translate }}</h2>
+              <ol class="steps">
+                @for (item of p.solution; track item.fr) {
+                  <li>{{ lang.localize(item) }}</li>
+                }
+              </ol>
+            </section>
+          }
+
+          @if (has('livrables')) {
+            <section id="livrables" class="case-section">
+              <h2>{{ 'case_study.deliverables' | translate }}</h2>
+              <ul class="deliverables">
+                @for (d of p.deliverables; track d.label.fr) {
+                  <li>
+                    <span class="deliverables__type">{{ deliverableLabel[d.type] | translate }}</span>
+                    <span>{{ lang.localize(d.label) }}</span>
+                  </li>
+                }
+              </ul>
+            </section>
+          }
+
+          @if (has('resultats')) {
+            <section id="resultats" class="case-section">
+              <h2>{{ 'case_study.results' | translate }}</h2>
+              <ul class="results">
+                @for (item of p.results; track item.fr) {
+                  <li>{{ lang.localize(item) }}</li>
+                }
+              </ul>
+            </section>
+          }
+
+          @if (has('captures')) {
+            <section id="captures" class="case-section">
+              <h2>{{ 'case_study.gallery' | translate }}</h2>
+              <app-case-gallery [media]="galleryMedia()" />
+            </section>
+          }
+
+          @if (has('stack')) {
+            <section id="stack" class="case-section">
+              <h2>{{ 'case_study.stack' | translate }}</h2>
+              <ul class="badge-list">
+                @for (tech of p.stack; track tech) {
+                  <li class="badge">{{ tech }}</li>
+                }
+              </ul>
+            </section>
+          }
+        </div>
+      </div>
+    }
   </article>
 }

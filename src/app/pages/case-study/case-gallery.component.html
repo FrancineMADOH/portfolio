@@ -1,0 +1,45 @@
+@if (desktopMedia().length) {
+  <ul class="gallery gallery--desktop">
+    @for (m of desktopMedia(); track m.src) {
+      <li>
+        <figure>
+          <button type="button" class="gallery__thumb" (click)="open(m)"
+                  [attr.aria-label]="('case_study.enlarge' | translate) + ' ' + lang.localize(m.alt)">
+            <img [src]="src(m)" alt="" [width]="size(m).width" [height]="size(m).height" loading="lazy" decoding="async">
+          </button>
+          <figcaption>{{ lang.localize(m.alt) }}</figcaption>
+        </figure>
+      </li>
+    }
+  </ul>
+}
+
+@if (mobileMedia().length) {
+  <ul class="gallery gallery--mobile">
+    @for (m of mobileMedia(); track m.src) {
+      <li>
+        <figure>
+          <button type="button" class="gallery__thumb gallery__thumb--phone" (click)="open(m)"
+                  [attr.aria-label]="('case_study.enlarge' | translate) + ' ' + lang.localize(m.alt)">
+            <img [src]="src(m)" alt="" [width]="size(m).width" [height]="size(m).height" loading="lazy" decoding="async">
+          </button>
+          <figcaption>{{ lang.localize(m.alt) }}</figcaption>
+        </figure>
+      </li>
+    }
+  </ul>
+}
+
+<dialog #dialog class="lightbox" [attr.aria-label]="opened() ? lang.localize(opened()!.alt) : null"
+        (click)="onDialogClick($event)" (close)="opened.set(null)">
+  @if (opened(); as m) {
+    <figure class="lightbox__figure" [class.lightbox__figure--phone]="m.kind === 'mobile'">
+      <img [src]="src(m)" [alt]="lang.localize(m.alt)" [width]="size(m).width" [height]="size(m).height">
+      <figcaption>{{ lang.localize(m.alt) }}</figcaption>
+    </figure>
+  }
+  <button type="button" class="lightbox__close" (click)="close()">
+    <span aria-hidden="true">×</span>
+    <span class="visually-hidden">{{ 'case_study.close' | translate }}</span>
+  </button>
+</dialog>
