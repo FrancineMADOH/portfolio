@@ -1,27 +1,4 @@
 {
-  "nav": {
-    "skills": "Skills",
-    "projects": "Projects",
-    "contact": "Contact"
-  },
-  "hero": {
-    "cta_projects": "View my projects",
-    "cta_github": "GitHub"
-  },
-  "skills": {
-    "title": "Skills",
-    "backend": "Backend",
-    "python_odoo": "Python / Odoo",
-    "mobile": "Mobile",
-    "ia": "AI"
-  },
-  "projects": {
-    "title": "My Projects",
-    "subtitle": "A selection of my recent work.",
-    "filter_all": "All",
-    "view_project": "View project",
-    "empty": "No projects in this category."
-  },
   "contact": {
     "title": "Contact me",
     "subtitle": "Let's discuss your needs or a collaboration.",

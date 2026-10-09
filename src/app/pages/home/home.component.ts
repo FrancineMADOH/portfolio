@@ -9,6 +9,7 @@ import { PROJECTS } from '../../content/projects';
 import { DEFAULT_ROLE, findRole, ROLES } from '../../content/roles';
 import { LanguageService } from '../../services/language.service';
 import { RoleService } from '../../services/role.service';
+import { SeoService } from '../../services/seo.service';
 import { JourneyComponent } from './journey.component';
 import { ProjectCardComponent } from './project-card.component';
 import { SkillsComponent } from './skills.component';
@@ -44,7 +45,23 @@ export class HomeComponent {
 
   readonly facets = computed(() => (this.role().id === 'developpeuse' ? [...FACETS].reverse() : FACETS));
 
+  private readonly seo = inject(SeoService);
+
   constructor() {
     effect(() => this.roleService.setActive(this.role().id));
+
+    // Titre, description et aperçu de partage propres à chaque lentille ; /profil/consultante renvoie vers /.
+    effect(() => {
+      const role = this.role();
+      const lang = this.lang.currentLang();
+      const path = this.roleId() ? `/profil/${role.id}` : '/';
+      this.seo.update({
+        title: `Francine MADOH · ${role.title[lang]}`,
+        description: role.pitch[lang],
+        path,
+        canonicalPath: role.id === DEFAULT_ROLE ? '/' : path,
+        lang
+      });
+    });
   }
 }

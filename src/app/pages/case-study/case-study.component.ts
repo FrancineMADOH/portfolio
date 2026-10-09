@@ -1,4 +1,4 @@
-import { Component, computed, inject, input } from '@angular/core';
+import { Component, computed, effect, inject, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
 
@@ -8,6 +8,7 @@ import { CaseStudy, Deliverable } from '../../content/models';
 import { PROJECTS, findProject } from '../../content/projects';
 import { LanguageService } from '../../services/language.service';
 import { RoleService } from '../../services/role.service';
+import { SeoService } from '../../services/seo.service';
 import { PhoneFrameComponent } from '../../shared/phone-frame/phone-frame.component';
 import { PlayBadgeComponent } from '../../shared/play-badge/play-badge.component';
 import { CaseGalleryComponent } from './case-gallery.component';
@@ -80,6 +81,24 @@ export class CaseStudyComponent {
       .map(g => ({ ...g, items: deliverables.filter(d => g.types.includes(d.type)) }))
       .filter(g => g.items.length > 0);
   });
+
+  private readonly seo = inject(SeoService);
+
+  constructor() {
+    effect(() => {
+      const p = this.project();
+      if (!p) {
+        return;
+      }
+      const lang = this.lang.currentLang();
+      this.seo.update({
+        title: `${p.title[lang]} · Francine MADOH`,
+        description: p.summary[lang],
+        path: `/projets/${p.slug}`,
+        lang
+      });
+    });
+  }
 
   has(id: SectionId): boolean {
     return this.sections().some(s => s.id === id);

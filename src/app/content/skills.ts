@@ -75,8 +75,12 @@ export const SKILL_BLOCKS: SkillBlock[] = [
         items: [same('Flutter'), same('Dart'), same('Riverpod'), same('go_router')]
       },
       {
+        title: { fr: 'IA', en: 'AI' },
+        items: [same('Claude Code'), same('DIFY'), same('Anthropic SDK'), same('Groq'), same('Gemini'), same('Ollama'), same('Whisper'), { fr: 'Prompt et context engineering', en: 'Prompt and context engineering' }]
+      },
+      {
         title: { fr: 'Données et déploiement', en: 'Data and deployment' },
-        items: [same('PostgreSQL'), same('MySQL'), same('Redis'), same('Docker'), same('NGINX'), same('GitHub Actions')]
+        items: [same('SQL'), same('PostgreSQL'), same('MySQL'), same('Redis'), same('Docker'), same('NGINX'), same('GitHub Actions')]
       }
     ]
   }

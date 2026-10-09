@@ -1,27 +1,4 @@
 {
-  "nav": {
-    "skills": "Compétences",
-    "projects": "Projets",
-    "contact": "Contact"
-  },
-  "hero": {
-    "cta_projects": "Voir mes projets",
-    "cta_github": "GitHub"
-  },
-  "skills": {
-    "title": "Compétences",
-    "backend": "Backend",
-    "python_odoo": "Python / Odoo",
-    "mobile": "Mobile",
-    "ia": "IA"
-  },
-  "projects": {
-    "title": "Mes Projets",
-    "subtitle": "Une sélection de mes récentes réalisations.",
-    "filter_all": "Tous",
-    "view_project": "Voir le projet",
-    "empty": "Aucun projet dans cette catégorie."
-  },
   "contact": {
     "title": "Me contacter",
     "subtitle": "Discutons de vos besoins ou d'une collaboration.",
