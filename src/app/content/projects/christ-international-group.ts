@@ -140,8 +140,8 @@ export const CHRIST_INTERNATIONAL_GROUP: CaseStudy = {
     ],
     'odoo': [
       {
-        fr: 'Choix des modules natifs : Ventes, Portail, Événements, Facturation sans comptabilité complète.',
-        en: 'Choice of native modules: Sales, Portal, Events, Invoicing without full accounting.'
+        fr: 'Choix des modules natifs : Site web, Portail client, Événements, Facturation sans comptabilité complète.',
+        en: 'Choice of native modules: Website, Customer portal, Events, Invoicing without full accounting.'
       },
       {
         fr: 'Paramétrage pensé pour l’autonomie du client : fiches de contenu, deux niveaux de droits d’édition, données protégées mises à jour par migration.',

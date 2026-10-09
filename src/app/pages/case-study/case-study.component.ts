@@ -10,11 +10,13 @@ import { LanguageService } from '../../services/language.service';
 import { PhoneFrameComponent } from '../../shared/phone-frame/phone-frame.component';
 import { PlayBadgeComponent } from '../../shared/play-badge/play-badge.component';
 import { CaseGalleryComponent } from './case-gallery.component';
+import { CaseRolesComponent } from './case-roles.component';
 
 /** Sections du corps de l'étude de cas, dans l'ordre d'affichage. */
-type SectionId = 'contexte' | 'diagnostic' | 'solution' | 'livrables' | 'resultats' | 'captures' | 'stack';
+type SectionId = 'role' | 'contexte' | 'diagnostic' | 'solution' | 'livrables' | 'resultats' | 'captures' | 'stack';
 
 const SECTIONS: { id: SectionId; labelKey: string; hasContent: (p: CaseStudy) => boolean }[] = [
+  { id: 'role', labelKey: 'case_study.my_role', hasContent: p => Object.values(p.roles).some(items => items?.length) },
   { id: 'contexte', labelKey: 'case_study.context', hasContent: p => !isEmptyText(p.context) },
   { id: 'diagnostic', labelKey: 'case_study.diagnosis', hasContent: p => p.diagnosis.length > 0 },
   { id: 'solution', labelKey: 'case_study.solution', hasContent: p => p.solution.length > 0 },
@@ -34,7 +36,7 @@ const DELIVERABLE_LABEL: Record<Deliverable['type'], string> = {
 @Component({
   selector: 'app-case-study',
   standalone: true,
-  imports: [RouterLink, TranslatePipe, PhoneFrameComponent, PlayBadgeComponent, CaseGalleryComponent],
+  imports: [RouterLink, TranslatePipe, PhoneFrameComponent, PlayBadgeComponent, CaseGalleryComponent, CaseRolesComponent],
   templateUrl: './case-study.component.html',
   styleUrl: './case-study.component.css'
 })

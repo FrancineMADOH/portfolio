@@ -84,6 +84,8 @@
     "type_module": "Module",
     "type_site": "Site web",
     "enlarge": "Agrandir la capture :",
-    "close": "Fermer"
+    "close": "Fermer",
+    "my_role": "Mon rôle",
+    "roles_tabs": "Mon rôle selon le profil"
   }
 }

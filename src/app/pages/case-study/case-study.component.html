@@ -64,6 +64,13 @@
         </nav>
 
         <div class="case-content">
+          @if (has('role')) {
+            <section id="role" class="case-section">
+              <h2>{{ 'case_study.my_role' | translate }}</h2>
+              <app-case-roles [project]="p" />
+            </section>
+          }
+
           @if (has('contexte')) {
             <section id="contexte" class="case-section">
               <h2>{{ 'case_study.context' | translate }}</h2>

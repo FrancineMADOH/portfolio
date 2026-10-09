@@ -1,0 +1,23 @@
+@if (roles().length) {
+  <div class="roles">
+    <div class="roles__tabs" role="tablist" [attr.aria-label]="'case_study.roles_tabs' | translate">
+      @for (role of roles(); track role.id; let i = $index) {
+        <button #tab type="button" role="tab" class="roles__tab"
+                [id]="'role-tab-' + role.id"
+                [attr.aria-selected]="role.id === selectedId()"
+                [attr.aria-controls]="'role-panel'"
+                [attr.tabindex]="role.id === selectedId() ? 0 : -1"
+                (click)="select(role.id)" (keydown)="onKeydown($event, i)">
+          {{ lang.localize(role.label) }}
+        </button>
+      }
+    </div>
+    <div id="role-panel" class="roles__panel" role="tabpanel" [attr.aria-labelledby]="'role-tab-' + selectedId()" tabindex="0">
+      <ul>
+        @for (item of items(); track item.fr) {
+          <li>{{ lang.localize(item) }}</li>
+        }
+      </ul>
+    </div>
+  </div>
+}
