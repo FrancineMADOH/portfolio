@@ -1,16 +1,11 @@
-<footer style="background: var(--bg-card); border-top: 1px solid var(--border);">
-  <div class="container py-4 d-flex flex-column flex-sm-row align-items-center justify-content-between gap-3">
-
-    <span style="color: var(--text-muted); font-size: 0.875rem;">
-      © {{ currentYear }} Francine MADOH
-    </span>
-
-    <div class="d-flex gap-3">
-      <a href="https://github.com/FrancineMADOH" target="_blank" rel="noopener"
-         style="color: var(--text-muted); text-decoration: none;">{{ 'footer.github' | translate }}</a>
-      <a href="https://www.linkedin.com/in/francine-madoh" target="_blank" rel="noopener"
-         style="color: var(--text-muted); text-decoration: none;">{{ 'footer.linkedin' | translate }}</a>
-    </div>
-
+<footer class="footer">
+  <div class="footer__inner">
+    <p class="footer__copyright">© {{ currentYear }} Francine MADOH. {{ 'footer.rights' | translate }}</p>
+    <ul class="footer__links" [attr.aria-label]="'footer.links' | translate">
+      <li><a [href]="links.github" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a [href]="links.linkedin" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a [href]="links.email">{{ 'footer.email' | translate }}</a></li>
+    </ul>
+    <p class="footer__stack">{{ 'footer.built_with' | translate }}</p>
   </div>
 </footer>

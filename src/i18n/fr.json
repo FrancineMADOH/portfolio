@@ -39,8 +39,10 @@
     "err_msg_minlength": "Au moins 10 caractères."
   },
   "footer": {
-    "github": "GitHub",
-    "linkedin": "LinkedIn"
+    "rights": "Tous droits réservés.",
+    "built_with": "Construit avec Angular, pré-rendu SSR.",
+    "links": "Liens",
+    "email": "E-mail"
   },
   "not_found": {
     "title": "Page introuvable",

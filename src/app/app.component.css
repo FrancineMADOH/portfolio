@@ -1,6 +1,20 @@
-/* Direction C : barre latérale fixe à gauche, contenu qui défile à droite (≥ 1024 px). */
+/* Mobile : en-tête puis contenu, empilés. Bureau (≥ 1024 px) : barre latérale fixe à gauche, contenu qui défile à droite. */
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .layout__content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
   min-width: 0;
+}
+
+/* Le pied de page reste en bas même sur une page courte */
+.layout__content > app-footer {
+  margin-top: auto;
 }
 
 @media (min-width: 1024px) {
@@ -8,6 +22,10 @@
     display: grid;
     grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
     align-items: start;
+  }
+
+  .layout__content {
+    min-height: 100vh;
   }
 
   .layout__sidebar {

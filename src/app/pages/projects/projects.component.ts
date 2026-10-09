@@ -2,7 +2,6 @@
 import { Component, OnInit, signal, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormBuilder, Validators, FormGroup } from '@angular/forms';
-import { FooterComponent } from '../../shared/footer/footer.component';
 import { Project } from '../../models/project.model';
 import { ProjectService } from '../../services/project.service';
 import { finalize } from 'rxjs/operators';
@@ -18,7 +17,7 @@ import { DEFAULT_ROLE } from '../../content/roles';
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, FooterComponent, TranslatePipe],
+  imports: [CommonModule, ReactiveFormsModule, TranslatePipe],
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.css']
 })

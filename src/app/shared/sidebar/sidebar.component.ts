@@ -4,6 +4,7 @@ import { NavigationEnd, Router, RouterLink, RouterLinkActive } from '@angular/ro
 import { TranslatePipe } from '@ngx-translate/core';
 import { filter } from 'rxjs/operators';
 
+import { PROFILE_LINKS } from '../../content/profile';
 import { ROLE_IDS, ROLES } from '../../content/roles';
 import { LanguageService } from '../../services/language.service';
 import { RoleService } from '../../services/role.service';
@@ -35,11 +36,7 @@ export class SidebarComponent {
 
   readonly roles = ROLE_IDS.map(id => ROLES[id]);
 
-  readonly links = {
-    github: 'https://github.com/FrancineMADOH',
-    linkedin: 'https://www.linkedin.com/in/francine-madoh/',
-    email: 'mailto:francinemadoh@gmail.com'
-  };
+  readonly links = PROFILE_LINKS;
 
   /** Section de l'accueil actuellement visible, pour l'état actif de la navigation. */
   readonly activeSection = signal<string | null>(null);
