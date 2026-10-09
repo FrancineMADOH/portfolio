@@ -100,6 +100,11 @@
     "facet_build_text": "Angular, Node.js and TypeScript, Python and Odoo, Flutter: applications in production, with AI as an accelerator.",
     "cta_projects": "See my projects",
     "cta_contact": "Contact me",
-    "figures": "Key figures"
+    "figures": "Key figures",
+    "projects_eyebrow": "Case studies",
+    "projects_title": "Projects",
+    "projects_lead": "Four projects in production, told from diagnosis to deployment.",
+    "my_role": "My role:",
+    "read_case": "Read the case study"
   }
 }

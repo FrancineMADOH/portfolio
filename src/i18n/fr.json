@@ -100,6 +100,11 @@
     "facet_build_text": "Angular, Node.js et TypeScript, Python et Odoo, Flutter : des applications en production, avec l’IA comme levier d’accélération.",
     "cta_projects": "Voir mes projets",
     "cta_contact": "Me contacter",
-    "figures": "Chiffres clés"
+    "figures": "Chiffres clés",
+    "projects_eyebrow": "Études de cas",
+    "projects_title": "Projets",
+    "projects_lead": "Quatre projets en production, racontés du diagnostic au déploiement.",
+    "my_role": "Mon rôle :",
+    "read_case": "Lire l’étude de cas"
   }
 }

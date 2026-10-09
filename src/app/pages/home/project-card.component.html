@@ -1,0 +1,24 @@
+@let p = project();
+<article class="card-project" [class.card-project--featured]="featured()">
+  @if (media(); as m) {
+    <div class="card-project__media" [class.card-project__media--mobile]="m.kind === 'mobile'">
+      <img [src]="src(m)" alt="" [width]="size(m).width" [height]="size(m).height" loading="lazy" decoding="async">
+    </div>
+  }
+  <div class="card-project__body">
+    <p class="card-project__meta">{{ lang.localize(p.client) }} · {{ lang.localize(p.status) }}</p>
+    <h3 class="card-project__title">
+      <a [routerLink]="['/projets', p.slug]">{{ lang.localize(p.title) }}</a>
+    </h3>
+    <p class="card-project__summary">{{ lang.localize(p.summary) }}</p>
+    @if (roleHighlight(); as highlight) {
+      <p class="card-project__role"><strong>{{ 'home.my_role' | translate }}</strong> {{ lang.localize(highlight) }}</p>
+    }
+    <ul class="badge-list">
+      @for (tech of badges(); track tech) {
+        <li class="badge">{{ tech }}</li>
+      }
+    </ul>
+    <span class="card-project__more" aria-hidden="true">{{ 'home.read_case' | translate }} →</span>
+  </div>
+</article>

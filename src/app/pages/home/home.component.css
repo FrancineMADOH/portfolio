@@ -66,6 +66,43 @@
   border-bottom: 1px solid var(--color-border);
 }
 
+/* Sections de l'accueil */
+.home-section {
+  margin-top: var(--space-9);
+}
+
+.home-section__lead {
+  max-width: 62ch;
+  margin-bottom: var(--space-6);
+  color: var(--color-text-muted);
+  font-size: var(--text-lg);
+}
+
+/* Projets : le premier en avant, les autres en grille */
+.projects {
+  display: grid;
+  gap: var(--space-5);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 768px) {
+  .projects {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .projects__featured {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 1280px) {
+  .projects {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 @media (min-width: 768px) {
   .figures {
     grid-template-columns: repeat(4, minmax(0, 1fr));

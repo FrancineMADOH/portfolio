@@ -3,9 +3,11 @@ import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
 
 import { HOME_FIGURES } from '../../content/profile';
+import { PROJECTS } from '../../content/projects';
 import { DEFAULT_ROLE, findRole, ROLES } from '../../content/roles';
 import { LanguageService } from '../../services/language.service';
 import { RoleService } from '../../services/role.service';
+import { ProjectCardComponent } from './project-card.component';
 
 /** Les deux facettes du profil, toujours présentes ; la lentille Développeuse met « Je construis » en premier. */
 const FACETS = [
@@ -16,7 +18,7 @@ const FACETS = [
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterLink, TranslatePipe],
+  imports: [RouterLink, TranslatePipe, ProjectCardComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
@@ -30,6 +32,9 @@ export class HomeComponent {
   readonly role = computed(() => findRole(this.roleId()) ?? ROLES[DEFAULT_ROLE]);
 
   readonly figures = HOME_FIGURES;
+
+  /** Études de cas dans l'ordre de la lentille. */
+  readonly projects = computed(() => this.role().projectOrder.map(slug => PROJECTS[slug]));
 
   readonly facets = computed(() => (this.role().id === 'developpeuse' ? [...FACETS].reverse() : FACETS));
 

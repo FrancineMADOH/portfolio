@@ -27,4 +27,17 @@
       </div>
     }
   </section>
+
+  <section id="projets" class="home-section" aria-labelledby="projets-title">
+    <p class="eyebrow">{{ 'home.projects_eyebrow' | translate }}</p>
+    <h2 id="projets-title">{{ 'home.projects_title' | translate }}</h2>
+    <p class="home-section__lead">{{ 'home.projects_lead' | translate }}</p>
+    <ul class="projects">
+      @for (p of projects(); track p.slug; let first = $first) {
+        <li [class.projects__featured]="first">
+          <app-project-card [project]="p" [roleId]="role().id" [featured]="first" />
+        </li>
+      }
+    </ul>
+  </section>
 </div>
