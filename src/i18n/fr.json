@@ -42,9 +42,23 @@
     "github": "GitHub",
     "linkedin": "LinkedIn"
   },
-  "NOT_FOUND": {
-    "TITLE": "Page introuvable",
-    "TEXT": "Cette page n’existe pas ou a été déplacée.",
-    "BACK": "Retour à l’accueil"
+  "not_found": {
+    "title": "Page introuvable",
+    "text": "Cette page n’existe pas ou a été déplacée.",
+    "back": "Retour à l’accueil"
+  },
+  "sidebar": {
+    "tagline": "Du diagnostic au déploiement.",
+    "photo_alt": "Photo de Francine MADOH",
+    "main_nav": "Navigation principale",
+    "nav_projects": "Projets",
+    "nav_journey": "Parcours",
+    "nav_skills": "Compétences",
+    "nav_method": "Méthode",
+    "nav_contact": "Contact",
+    "roles_label": "Voir mon profil de",
+    "switch_lang": "Switch to English",
+    "links": "Liens",
+    "email": "E-mail"
   }
 }

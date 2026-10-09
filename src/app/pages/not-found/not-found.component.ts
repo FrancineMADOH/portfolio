@@ -9,9 +9,9 @@ import { TranslatePipe } from '@ngx-translate/core';
   template: `
     <main class="placeholder">
       <p class="eyebrow">404</p>
-      <h1>{{ 'NOT_FOUND.TITLE' | translate }}</h1>
-      <p class="lead">{{ 'NOT_FOUND.TEXT' | translate }}</p>
-      <a class="btn btn--primary" routerLink="/">{{ 'NOT_FOUND.BACK' | translate }}</a>
+      <h1>{{ 'not_found.title' | translate }}</h1>
+      <p class="lead">{{ 'not_found.text' | translate }}</p>
+      <a class="btn btn--primary" routerLink="/">{{ 'not_found.back' | translate }}</a>
     </main>
   `,
   styleUrl: '../placeholder.css'

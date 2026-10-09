@@ -42,9 +42,23 @@
     "github": "GitHub",
     "linkedin": "LinkedIn"
   },
-  "NOT_FOUND": {
-    "TITLE": "Page not found",
-    "TEXT": "This page does not exist or has been moved.",
-    "BACK": "Back to home"
+  "not_found": {
+    "title": "Page not found",
+    "text": "This page does not exist or has been moved.",
+    "back": "Back to home"
+  },
+  "sidebar": {
+    "tagline": "From diagnosis to deployment.",
+    "photo_alt": "Photo of Francine MADOH",
+    "main_nav": "Main navigation",
+    "nav_projects": "Projects",
+    "nav_journey": "Experience",
+    "nav_skills": "Skills",
+    "nav_method": "Method",
+    "nav_contact": "Contact",
+    "roles_label": "View my profile as",
+    "switch_lang": "Passer en français",
+    "links": "Links",
+    "email": "E-mail"
   }
 }

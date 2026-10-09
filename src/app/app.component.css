@@ -1,0 +1,18 @@
+/* Direction C : barre latérale fixe à gauche, contenu qui défile à droite (≥ 1024 px). */
+.layout__content {
+  min-width: 0;
+}
+
+@media (min-width: 1024px) {
+  .layout {
+    display: grid;
+    grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .layout__sidebar {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+  }
+}

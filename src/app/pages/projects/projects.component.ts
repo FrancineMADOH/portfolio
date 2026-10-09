@@ -2,7 +2,6 @@
 import { Component, OnInit, signal, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormBuilder, Validators, FormGroup } from '@angular/forms';
-import { NavbarComponent } from '../../shared/navbar/navbar.component';
 import { FooterComponent } from '../../shared/footer/footer.component';
 import { Project } from '../../models/project.model';
 import { ProjectService } from '../../services/project.service';
@@ -11,13 +10,15 @@ import { ContactService } from '../../services/contact.service';
 import { environment } from "../../../environements/environement";
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { LanguageService } from '../../services/language.service';
+import { RoleService } from '../../services/role.service';
+import { DEFAULT_ROLE } from '../../content/roles';
 
 
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule, NavbarComponent, ReactiveFormsModule, FooterComponent, TranslatePipe],
+  imports: [CommonModule, ReactiveFormsModule, FooterComponent, TranslatePipe],
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.css']
 })
@@ -60,8 +61,11 @@ export class ProjectsComponent implements OnInit {
     private projectsSvc: ProjectService,
     private contactSvc: ContactService,
     private translate: TranslateService,
-    public langSvc: LanguageService
+    public langSvc: LanguageService,
+    roleSvc: RoleService
   ) {
+    // Ancien accueil (supprimé en phase 5) : `/` correspond à la lentille par défaut.
+    roleSvc.setActive(DEFAULT_ROLE);
     this.contactForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       message: ['', [Validators.required, Validators.minLength(10)]],

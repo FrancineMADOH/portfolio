@@ -1,7 +1,8 @@
-import { Component, computed, inject, input } from '@angular/core';
+import { Component, computed, effect, inject, input } from '@angular/core';
 
 import { DEFAULT_ROLE, findRole, ROLES } from '../../content/roles';
 import { LanguageService } from '../../services/language.service';
+import { RoleService } from '../../services/role.service';
 
 // Squelette (F0.6). Accueil et pages de lentille, construits en phase 5.
 @Component({
@@ -18,9 +19,14 @@ import { LanguageService } from '../../services/language.service';
 })
 export class HomeComponent {
   readonly lang = inject(LanguageService);
+  private readonly roles = inject(RoleService);
 
   /** Paramètre `:role` de `/profil/:role`, absent sur `/`. */
   readonly roleId = input<string>('', { alias: 'role' });
 
   readonly role = computed(() => findRole(this.roleId()) ?? ROLES[DEFAULT_ROLE]);
+
+  constructor() {
+    effect(() => this.roles.setActive(this.role().id));
+  }
 }

@@ -1,0 +1,42 @@
+<aside class="sidebar">
+  <a class="sidebar__identity" [routerLink]="roleService.homePath()">
+    <img class="sidebar__photo" src="/profile.jpeg" [alt]="'sidebar.photo_alt' | translate" width="96" height="96">
+    <span class="sidebar__name">Francine MADOH</span>
+  </a>
+  <p class="sidebar__title">{{ lang.localize(roleService.activeRole().title) }}</p>
+  <p class="sidebar__tagline">{{ 'sidebar.tagline' | translate }}</p>
+
+  <nav class="sidebar__nav" [attr.aria-label]="'sidebar.main_nav' | translate">
+    <a [routerLink]="roleService.homePath()" fragment="projets" [class.is-active]="activeSection() === 'projets'">{{ 'sidebar.nav_projects' | translate }}</a>
+    <a [routerLink]="roleService.homePath()" fragment="parcours" [class.is-active]="activeSection() === 'parcours'">{{ 'sidebar.nav_journey' | translate }}</a>
+    <a [routerLink]="roleService.homePath()" fragment="competences" [class.is-active]="activeSection() === 'competences'">{{ 'sidebar.nav_skills' | translate }}</a>
+    <a routerLink="/methode" routerLinkActive="is-active" ariaCurrentWhenActive="page">{{ 'sidebar.nav_method' | translate }}</a>
+    <a [routerLink]="roleService.homePath()" fragment="contact" [class.is-active]="activeSection() === 'contact'">{{ 'sidebar.nav_contact' | translate }}</a>
+  </nav>
+
+  <div class="sidebar__roles">
+    <p class="sidebar__label" id="roles-label">{{ 'sidebar.roles_label' | translate }}</p>
+    <ul aria-labelledby="roles-label">
+      @for (role of roles; track role.id) {
+        <li>
+          <a [routerLink]="roleService.pathFor(role.id)"
+             [class.is-active]="role.id === roleService.activeRole().id"
+             [attr.aria-current]="role.id === roleService.activeRole().id ? 'true' : null">{{ lang.localize(role.label) }}</a>
+        </li>
+      }
+    </ul>
+  </div>
+
+  <div class="sidebar__footer">
+    <button type="button" class="sidebar__lang" (click)="lang.toggle()" [attr.aria-label]="'sidebar.switch_lang' | translate">
+      <span [class.is-active]="lang.currentLang() === 'fr'">FR</span>
+      <span aria-hidden="true">/</span>
+      <span [class.is-active]="lang.currentLang() === 'en'">EN</span>
+    </button>
+    <ul class="sidebar__links" [attr.aria-label]="'sidebar.links' | translate">
+      <li><a [href]="links.github" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a [href]="links.linkedin" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a [href]="links.email">{{ 'sidebar.email' | translate }}</a></li>
+    </ul>
+  </div>
+</aside>
