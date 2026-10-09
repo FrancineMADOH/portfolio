@@ -105,6 +105,9 @@
     "projects_title": "Projects",
     "projects_lead": "Four projects in production, told from diagnosis to deployment.",
     "my_role": "My role:",
-    "read_case": "Read the case study"
+    "read_case": "Read the case study",
+    "journey_eyebrow": "Experience and education",
+    "journey_title": "Experience",
+    "education": "Education"
   }
 }

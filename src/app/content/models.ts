@@ -66,3 +66,23 @@ export interface CaseStudy {
   links: ProjectLink[];
   media: ProjectMedia[];
 }
+
+export interface ExperienceHighlight {
+  text: L10n;
+  /** Lentilles pour lesquelles ce point est mis en avant. */
+  roles: RoleId[];
+}
+
+export interface Experience {
+  organisation: string;
+  title: L10n;
+  period: L10n;
+  location: L10n;
+  highlights: ExperienceHighlight[];
+}
+
+export interface Education {
+  title: L10n;
+  school: string;
+  year: string;
+}

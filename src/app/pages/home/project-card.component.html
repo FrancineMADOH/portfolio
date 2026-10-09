@@ -1,5 +1,5 @@
 @let p = project();
-<article class="card-project" [class.card-project--featured]="featured()">
+<article class="card-project">
   @if (media(); as m) {
     <div class="card-project__media" [class.card-project__media--mobile]="m.kind === 'mobile'">
       <img [src]="src(m)" alt="" [width]="size(m).width" [height]="size(m).height" loading="lazy" decoding="async">

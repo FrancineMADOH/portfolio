@@ -105,6 +105,9 @@
     "projects_title": "Projets",
     "projects_lead": "Quatre projets en production, racontés du diagnostic au déploiement.",
     "my_role": "Mon rôle :",
-    "read_case": "Lire l’étude de cas"
+    "read_case": "Lire l’étude de cas",
+    "journey_eyebrow": "Expériences et formation",
+    "journey_title": "Parcours",
+    "education": "Formation"
   }
 }

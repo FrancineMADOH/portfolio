@@ -6,7 +6,7 @@ import { mediaSize, mediaSrc } from '../../content/media';
 import { CaseStudy, RoleId } from '../../content/models';
 import { LanguageService } from '../../services/language.service';
 
-/** Carte d'étude de cas de l'accueil. Toute la carte mène à l'étude de cas. */
+/** Carte d'étude de cas de l'accueil, pleine largeur (visuel et texte côte à côte dès 1024 px). Toute la carte mène à l'étude de cas. */
 @Component({
   selector: 'app-project-card',
   standalone: true,
@@ -19,8 +19,6 @@ export class ProjectCardComponent {
 
   readonly project = input.required<CaseStudy>();
   readonly roleId = input.required<RoleId>();
-  /** Carte mise en avant (premier projet de la lentille) : visuel et texte côte à côte sur grand écran. */
-  readonly featured = input<boolean>(false);
 
   readonly media = computed(() => this.project().media[0]);
 

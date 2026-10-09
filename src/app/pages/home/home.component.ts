@@ -7,6 +7,7 @@ import { PROJECTS } from '../../content/projects';
 import { DEFAULT_ROLE, findRole, ROLES } from '../../content/roles';
 import { LanguageService } from '../../services/language.service';
 import { RoleService } from '../../services/role.service';
+import { JourneyComponent } from './journey.component';
 import { ProjectCardComponent } from './project-card.component';
 
 /** Les deux facettes du profil, toujours présentes ; la lentille Développeuse met « Je construis » en premier. */
@@ -18,7 +19,7 @@ const FACETS = [
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterLink, TranslatePipe, ProjectCardComponent],
+  imports: [RouterLink, TranslatePipe, ProjectCardComponent, JourneyComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

@@ -78,29 +78,13 @@
   font-size: var(--text-lg);
 }
 
-/* Projets : le premier en avant, les autres en grille */
+/* Projets : une carte pleine largeur par projet, l'une sous l'autre */
 .projects {
   display: grid;
-  gap: var(--space-5);
+  gap: var(--space-6);
   margin: 0;
   padding: 0;
   list-style: none;
-}
-
-@media (min-width: 768px) {
-  .projects {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .projects__featured {
-    grid-column: 1 / -1;
-  }
-}
-
-@media (min-width: 1280px) {
-  .projects {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
 }
 
 @media (min-width: 768px) {

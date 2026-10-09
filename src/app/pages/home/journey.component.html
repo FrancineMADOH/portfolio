@@ -1,0 +1,30 @@
+<ol class="timeline">
+  @for (exp of experiences(); track exp.organisation) {
+    <li class="timeline__item">
+      <div class="timeline__head">
+        <h3 class="timeline__title">{{ lang.localize(exp.title) }}</h3>
+        <p class="timeline__meta">
+          <strong>{{ exp.organisation }}</strong> · {{ lang.localize(exp.location) }} · {{ lang.localize(exp.period) }}
+        </p>
+      </div>
+      <ul class="timeline__highlights">
+        @for (h of exp.highlights; track h.text.fr) {
+          <li>{{ lang.localize(h.text) }}</li>
+        }
+      </ul>
+    </li>
+  }
+</ol>
+
+<h3 class="education__title">{{ 'home.education' | translate }}</h3>
+<ul class="education">
+  @for (ed of education; track ed.title.fr) {
+    <li class="education__item">
+      <span class="education__year">{{ ed.year }}</span>
+      <span>
+        <span class="education__name">{{ lang.localize(ed.title) }}</span>
+        <span class="education__school">{{ ed.school }}</span>
+      </span>
+    </li>
+  }
+</ul>

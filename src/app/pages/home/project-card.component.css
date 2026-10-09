@@ -115,24 +115,35 @@
 }
 
 @media (min-width: 1024px) {
-  .card-project--featured {
+  .card-project {
     display: grid;
     grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
   }
 
-  .card-project--featured .card-project__media {
+  .card-project__media {
     aspect-ratio: auto;
     min-height: 100%;
     border-right: 1px solid var(--color-border);
     border-bottom: 0;
   }
 
-  .card-project--featured .card-project__body {
+  /* Téléphone : taille fixe, posé en bas de la zone visuelle, quelle que soit la hauteur du texte */
+  .card-project__media--mobile {
+    align-items: flex-end;
+    padding-top: var(--space-6);
+  }
+
+  .card-project__media--mobile img {
+    width: auto;
+    height: 340px;
+  }
+
+  .card-project__body {
     justify-content: center;
     padding: var(--space-6);
   }
 
-  .card-project--featured .card-project__title {
+  .card-project__title {
     font-size: var(--text-2xl);
   }
 }
