@@ -5,8 +5,9 @@ import { TranslatePipe } from '@ngx-translate/core';
 import { isEmptyText } from '../../content/localize';
 import { mediaSize, mediaSrc } from '../../content/media';
 import { CaseStudy, Deliverable } from '../../content/models';
-import { findProject } from '../../content/projects';
+import { PROJECTS, findProject } from '../../content/projects';
 import { LanguageService } from '../../services/language.service';
+import { RoleService } from '../../services/role.service';
 import { PhoneFrameComponent } from '../../shared/phone-frame/phone-frame.component';
 import { PlayBadgeComponent } from '../../shared/play-badge/play-badge.component';
 import { CaseGalleryComponent } from './case-gallery.component';
@@ -42,6 +43,7 @@ const DELIVERABLE_LABEL: Record<Deliverable['type'], string> = {
 })
 export class CaseStudyComponent {
   readonly lang = inject(LanguageService);
+  readonly roleService = inject(RoleService);
 
   /** Paramètre `:slug`. Un slug inconnu n'atteint jamais ce composant (garde `canMatch`). */
   readonly slug = input.required<string>();
@@ -56,6 +58,16 @@ export class CaseStudyComponent {
   readonly sections = computed(() => {
     const p = this.project();
     return p ? SECTIONS.filter(s => s.hasContent(p)) : [];
+  });
+
+  /** Projets voisins, dans l'ordre de la lentille active (le même que sur l'accueil). */
+  readonly neighbours = computed(() => {
+    const order = this.roleService.activeRole().projectOrder;
+    const index = order.indexOf(this.slug() as (typeof order)[number]);
+    return {
+      previous: index > 0 ? PROJECTS[order[index - 1]] : undefined,
+      next: index >= 0 && index < order.length - 1 ? PROJECTS[order[index + 1]] : undefined
+    };
   });
 
   readonly isEmptyText = isEmptyText;

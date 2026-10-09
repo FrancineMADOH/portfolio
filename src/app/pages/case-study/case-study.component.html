@@ -145,5 +145,25 @@
         </div>
       </div>
     }
+
+    <nav class="case-nav" [attr.aria-label]="'case_study.projects_nav' | translate">
+      <div class="case-nav__side">
+        @if (neighbours().previous; as prev) {
+          <a class="case-nav__link" [routerLink]="['/projets', prev.slug]">
+            <span class="case-nav__label">← {{ 'case_study.previous' | translate }}</span>
+            <span class="case-nav__title">{{ lang.localize(prev.title) }}</span>
+          </a>
+        }
+      </div>
+      <a class="case-nav__all" [routerLink]="roleService.homePath()" fragment="projets">{{ 'case_study.all_projects' | translate }}</a>
+      <div class="case-nav__side case-nav__side--next">
+        @if (neighbours().next; as next) {
+          <a class="case-nav__link" [routerLink]="['/projets', next.slug]">
+            <span class="case-nav__label">{{ 'case_study.next' | translate }} →</span>
+            <span class="case-nav__title">{{ lang.localize(next.title) }}</span>
+          </a>
+        }
+      </div>
+    </nav>
   </article>
 }

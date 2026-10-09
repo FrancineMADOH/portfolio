@@ -86,6 +86,10 @@
     "enlarge": "Agrandir la capture :",
     "close": "Fermer",
     "my_role": "Mon rôle",
-    "roles_tabs": "Mon rôle selon le profil"
+    "roles_tabs": "Mon rôle selon le profil",
+    "projects_nav": "Navigation entre les projets",
+    "previous": "Projet précédent",
+    "next": "Projet suivant",
+    "all_projects": "Tous les projets"
   }
 }

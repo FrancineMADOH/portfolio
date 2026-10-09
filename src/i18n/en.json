@@ -86,6 +86,10 @@
     "enlarge": "Enlarge screenshot:",
     "close": "Close",
     "my_role": "My role",
-    "roles_tabs": "My role by profile"
+    "roles_tabs": "My role by profile",
+    "projects_nav": "Project navigation",
+    "previous": "Previous project",
+    "next": "Next project",
+    "all_projects": "All projects"
   }
 }
