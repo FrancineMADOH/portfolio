@@ -46,4 +46,25 @@
     <h2 id="parcours-title">{{ 'home.journey_title' | translate }}</h2>
     <app-journey [roleId]="role().id" />
   </section>
+
+  <section id="competences" class="home-section" aria-labelledby="competences-title">
+    <p class="eyebrow">{{ 'home.skills_eyebrow' | translate }}</p>
+    <h2 id="competences-title">{{ 'home.skills_title' | translate }}</h2>
+    <app-skills [roleId]="role().id" />
+  </section>
+
+  <section id="ia" class="home-section" aria-labelledby="ia-title">
+    <p class="eyebrow">{{ 'home.ai_eyebrow' | translate }}</p>
+    <h2 id="ia-title">{{ 'home.ai_title' | translate }}</h2>
+    <p class="home-section__lead">{{ 'home.ai_lead' | translate }}</p>
+    <ol class="ai">
+      @for (usage of aiUsages; track usage.id) {
+        <li class="ai__item">
+          <h3 class="ai__title">{{ lang.localize(usage.title) }}</h3>
+          <p class="ai__text">{{ lang.localize(usage.text) }}</p>
+          <a class="ai__proof" [routerLink]="usage.proof.route || roleService.homePath()" [fragment]="usage.proof.fragment">{{ lang.localize(usage.proof.label) }} →</a>
+        </li>
+      }
+    </ol>
+  </section>
 </div>

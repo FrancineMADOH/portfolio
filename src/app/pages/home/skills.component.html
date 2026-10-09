@@ -1,0 +1,17 @@
+<div class="skills">
+  @for (block of blocks(); track block.id) {
+    <div class="skills__block" [class.skills__block--dev]="block.id === 'developpement'">
+      <h3 class="skills__title">{{ lang.localize(block.title) }}</h3>
+      @for (group of block.groups; track group.title.fr) {
+        <div class="skills__group">
+          <h4 class="skills__group-title">{{ lang.localize(group.title) }}</h4>
+          <ul class="badge-list">
+            @for (item of group.items; track item.fr) {
+              <li class="badge">{{ lang.localize(item) }}</li>
+            }
+          </ul>
+        </div>
+      }
+    </div>
+  }
+</div>

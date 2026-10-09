@@ -55,6 +55,63 @@
   gap: var(--space-3);
 }
 
+/* L'IA comme levier : 4 usages prouvés, numérotés */
+.ai {
+  display: grid;
+  gap: var(--space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: ai;
+}
+
+.ai__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-5) var(--space-5) var(--space-5) var(--space-8);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  counter-increment: ai;
+}
+
+.ai__item::before {
+  content: counter(ai, decimal-leading-zero);
+  position: absolute;
+  top: var(--space-5);
+  left: var(--space-5);
+  color: var(--color-accent);
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.ai__title {
+  margin: 0;
+  font-size: var(--text-lg);
+}
+
+.ai__text {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.ai__proof {
+  margin-top: auto;
+  padding-top: var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+@media (min-width: 1024px) {
+  .ai {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 /* Chiffres clés */
 .figures {
   display: grid;

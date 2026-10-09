@@ -154,7 +154,7 @@
 
             <!-- Boutons -->
             <div class="mt-auto d-flex gap-2">
-              <a [href]="p.github" target="_blank" rel="noopener"
+              <a *ngIf="p.github" [href]="p.github" target="_blank" rel="noopener"
                  class="btn btn-sm"
                  style="border: 1px solid var(--accent); color: var(--accent);">
                 GitHub

@@ -6,7 +6,7 @@
     "description_en": "Anonymous reporting platform for domestic violence in Cameroon. Empathetic AI chatbot (multi-LLM routing) that generates reports sent to NGOs and social services based on geolocation.",
     "technologies": "TypeScript · Express · Angular · PostgreSQL · Anthropic SDK · Gemini · Groq · Ollama · Docker",
     "category": "Fullstack + IA",
-    "github": "https://github.com/FrancineMADOH/nomoresilent",
+    "github": "",
     "lien": "https://nomoresilent.brightwill.org/"
   },
   {

@@ -8,6 +8,7 @@ import { CaseStudy } from '../models';
 //   - annuaire_organisations_partenaires.md : organisations partenaires potentielles au Cameroun
 //   - strategie_lancement.md : questions opérationnelles de lancement
 // Site en ligne : https://nomoresilent.brightwill.org
+// Dépôt GitHub privé : aucun lien vers le code (décision de Francine, 2026-10-09).
 
 export const NOMORESILENT: CaseStudy = {
   slug: 'nomoresilent',
@@ -127,8 +128,7 @@ export const NOMORESILENT: CaseStudy = {
   },
   stack: ['Angular 21', 'TypeScript', 'Node.js', 'Express', 'PostgreSQL', 'Tailwind CSS', 'Groq', 'Anthropic SDK', 'Gemini', 'Ollama', 'Jest', 'Docker', 'GitHub Actions'],
   links: [
-    { label: { fr: 'Voir le site', en: 'Visit the website' }, url: 'https://nomoresilent.brightwill.org/', kind: 'site' },
-    { label: { fr: 'Code sur GitHub', en: 'Code on GitHub' }, url: 'https://github.com/FrancineMADOH/nomoresilent', kind: 'github' }
+    { label: { fr: 'Voir le site', en: 'Visit the website' }, url: 'https://nomoresilent.brightwill.org/', kind: 'site' }
   ],
   media: [
     { src: 'images/projects/nomoresilent/accueil-desktop.webp', alt: { fr: 'Page d’accueil de NoMoreSilent : « Je suis victime » ou « Je suis témoin »', en: 'NoMoreSilent home page: “I am a victim” or “I am a witness”' }, kind: 'desktop' },
