@@ -3,6 +3,7 @@ import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
 
 import { AI_USAGES } from '../../content/ai';
+import { METHOD_STEPS } from '../../content/method';
 import { HOME_FIGURES } from '../../content/profile';
 import { PROJECTS } from '../../content/projects';
 import { DEFAULT_ROLE, findRole, ROLES } from '../../content/roles';
@@ -36,6 +37,7 @@ export class HomeComponent {
 
   readonly figures = HOME_FIGURES;
   readonly aiUsages = AI_USAGES;
+  readonly methodSteps = METHOD_STEPS;
 
   /** Études de cas dans l'ordre de la lentille. */
   readonly projects = computed(() => this.role().projectOrder.map(slug => PROJECTS[slug]));

@@ -67,4 +67,19 @@
       }
     </ol>
   </section>
+
+  <section id="methode" class="home-section" aria-labelledby="methode-title">
+    <p class="eyebrow">{{ 'home.method_eyebrow' | translate }}</p>
+    <h2 id="methode-title">{{ 'home.method_title' | translate }}</h2>
+    <p class="home-section__lead">{{ 'home.method_lead' | translate }}</p>
+    <ol class="method">
+      @for (step of methodSteps; track step.id; let i = $index) {
+        <li class="method__step">
+          <span class="method__number" aria-hidden="true">{{ i + 1 }}</span>
+          <span class="method__title">{{ lang.localize(step.title) }}</span>
+        </li>
+      }
+    </ol>
+    <a class="btn btn--secondary" routerLink="/methode">{{ 'home.method_cta' | translate }}</a>
+  </section>
 </div>
