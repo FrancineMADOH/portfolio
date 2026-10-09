@@ -1,6 +1,9 @@
 // Page de démonstration temporaire du design system (F0.3), retirée en F9.1.
 import { Component } from '@angular/core';
 
+import { PhoneFrameComponent } from '../../shared/phone-frame/phone-frame.component';
+import { PlayBadgeComponent } from '../../shared/play-badge/play-badge.component';
+
 interface Swatch {
   name: string;
   token: string;
@@ -12,6 +15,7 @@ interface Swatch {
 @Component({
   selector: 'app-styleguide',
   standalone: true,
+  imports: [PhoneFrameComponent, PlayBadgeComponent],
   templateUrl: './styleguide.component.html',
   styleUrl: './styleguide.component.css'
 })
@@ -33,6 +37,20 @@ export class StyleguideComponent {
     { name: 'Texte sur encre', token: '--color-on-ink', hex: '#F3F1EC', usage: '14,2:1 sur encre' },
     { name: 'Secondaire sur encre', token: '--color-on-ink-muted', hex: '#A9B3C4', usage: '7,6:1 sur encre' },
     { name: 'Accent sur encre', token: '--color-accent-on-ink', hex: '#E89A6B', usage: '7,1:1 sur encre' }
+  ];
+
+  readonly brightfretScreens = [
+    { src: '/images/projects/christ-international-group/app-brightfret-accueil.webp', alt: 'BrightFret : accueil, recherche par code ou scan QR' },
+    { src: '/images/projects/christ-international-group/app-brightfret-colis.webp', alt: 'BrightFret : liste des colis suivis' },
+    { src: '/images/projects/christ-international-group/app-brightfret-suivi.webp', alt: 'BrightFret : chronologie de suivi d’un colis' },
+    { src: '/images/projects/christ-international-group/app-brightfret-detail.webp', alt: 'BrightFret : documents, messagerie, facture et réclamation' }
+  ];
+
+  readonly mungoumScreens = [
+    { src: '/images/projects/mungoum/app-aujourdhui.webp', alt: 'Mungoum : jour nguemba du jour' },
+    { src: '/images/projects/mungoum/app-calendrier.webp', alt: 'Mungoum : calendrier du mois' },
+    { src: '/images/projects/mungoum/app-8-jours.webp', alt: 'Mungoum : les 8 jours et les marchés' },
+    { src: '/images/projects/mungoum/app-a-propos.webp', alt: 'Mungoum : à propos' }
   ];
 
   readonly roles = [

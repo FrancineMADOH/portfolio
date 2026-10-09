@@ -141,6 +141,13 @@
   gap: var(--space-5);
 }
 
+.sg-phones {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: var(--space-5);
+  margin-bottom: var(--space-4);
+}
+
 .sg-case {
   max-width: 520px;
 }

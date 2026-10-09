@@ -1,0 +1,40 @@
+:host {
+  display: block;
+  width: 100%;
+  max-width: 260px;
+}
+
+.phone {
+  position: relative;
+  margin: 0;
+  /* Bord supérieur plus épais : la caméra s'y loge sans recouvrir l'écran */
+  padding: 24px 10px 14px;
+  border-radius: 36px;
+  background: #1A1D24;
+  box-shadow: 0 0 0 1px #3A3F4A, var(--shadow-md);
+}
+
+/* Caméra frontale */
+.phone::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  z-index: 1;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #3A3F4A;
+  transform: translateX(-50%);
+}
+
+.phone__screen {
+  overflow: hidden;
+  border-radius: 22px;
+  background: var(--color-surface);
+}
+
+.phone__screen img {
+  width: 100%;
+  height: auto;
+}

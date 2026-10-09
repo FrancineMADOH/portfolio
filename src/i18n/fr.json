@@ -65,5 +65,8 @@
     "menu": "Menu",
     "open_menu": "Ouvrir le menu",
     "close_menu": "Fermer le menu"
+  },
+  "media": {
+    "play_badge_alt": "Disponible sur Google Play"
   }
 }

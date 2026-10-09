@@ -102,6 +102,23 @@
         </ul>
       </article>
 
+      <h3>Apps mobiles (F2.4)</h3>
+      <p class="muted">Captures des fiches Google Play dans un cadre de téléphone en CSS, badge officiel dans la langue active.</p>
+      <h4>BrightFret</h4>
+      <div class="sg-phones">
+        @for (s of brightfretScreens; track s.src) {
+          <app-phone-frame [src]="s.src" [alt]="s.alt" />
+        }
+      </div>
+      <app-play-badge url="https://play.google.com/store/apps/details?id=com.brightwill.brightfret" />
+      <h4>Mungoum</h4>
+      <div class="sg-phones">
+        @for (s of mungoumScreens; track s.src) {
+          <app-phone-frame [src]="s.src" [alt]="s.alt" [width]="800" />
+        }
+      </div>
+      <app-play-badge url="https://play.google.com/store/apps/details?id=com.brightwill.mungoum" />
+
       <h3>Focus clavier</h3>
       <p class="muted">Appuie sur Tab : chaque lien et bouton affiche un contour terracotta.</p>
     </section>
