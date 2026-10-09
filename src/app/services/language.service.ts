@@ -1,29 +1,60 @@
-import { Injectable, PLATFORM_ID, inject, signal } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
+import { DOCUMENT, isPlatformBrowser } from '@angular/common';
+import { Injectable, PLATFORM_ID, afterNextRender, inject, signal } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+
+export type Lang = 'fr' | 'en';
+
+export const DEFAULT_LANG: Lang = 'fr';
+const STORAGE_KEY = 'lang';
 
 @Injectable({ providedIn: 'root' })
 export class LanguageService {
   private translate = inject(TranslateService);
+  private document = inject(DOCUMENT);
   private isBrowser = isPlatformBrowser(inject(PLATFORM_ID));
 
-  currentLang = signal<string>('fr');
+  currentLang = signal<Lang>(DEFAULT_LANG);
 
   constructor() {
-    const saved = this.isBrowser ? localStorage.getItem('lang') || 'fr' : 'fr';
     this.translate.addLangs(['fr', 'en']);
-    this.setLang(saved);
+    this.apply(DEFAULT_LANG);
+
+    // La page pré-rendue est en français : la langue mémorisée n'est appliquée
+    // qu'après l'hydratation, pour que le DOM du serveur et celui du client concordent.
+    afterNextRender(() => {
+      const saved = this.readSaved();
+      if (saved !== DEFAULT_LANG) {
+        this.apply(saved);
+      }
+    });
   }
 
-  setLang(lang: string): void {
-    this.translate.use(lang);
-    this.currentLang.set(lang);
+  setLang(lang: Lang): void {
+    this.apply(lang);
     if (this.isBrowser) {
-      localStorage.setItem('lang', lang);
+      try {
+        localStorage.setItem(STORAGE_KEY, lang);
+      } catch {
+        // Stockage indisponible (navigation privée, données bloquées) : le choix n'est pas mémorisé.
+      }
     }
   }
 
   toggle(): void {
     this.setLang(this.currentLang() === 'fr' ? 'en' : 'fr');
+  }
+
+  private apply(lang: Lang): void {
+    this.translate.use(lang);
+    this.currentLang.set(lang);
+    this.document.documentElement.lang = lang;
+  }
+
+  private readSaved(): Lang {
+    try {
+      return localStorage.getItem(STORAGE_KEY) === 'en' ? 'en' : 'fr';
+    } catch {
+      return DEFAULT_LANG;
+    }
   }
 }
