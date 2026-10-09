@@ -10,16 +10,6 @@
     "lien": "https://nomoresilent.brightwill.org/"
   },
   {
-    "id": 2,
-    "title": "Kleanet SaaS pressing",
-    "description": "SaaS 3 couches pour pressing : module Odoo back-office (commandes, abonnements, rendez-vous collecte/livraison, règles tarifaires, suivi commande en ligne, notifications email/SMS Twilio, feedbacks, FAQ, reçus PDF, dashboard admin) + API Fastify/TypeScript (JWT, Redis, Firebase, Zod) + application mobile Flutter Android/iOS.",
-    "description_en": "3-layer SaaS for laundry services: Odoo back-office module (orders, subscriptions, pickup/delivery appointments, pricing rules, online order tracking, email/SMS Twilio notifications, customer feedback, FAQ, PDF receipts, admin dashboard) + Fastify/TypeScript API (JWT, Redis, Firebase, Zod) + Flutter mobile app for Android/iOS.",
-    "technologies": "TypeScript · Fastify v5 · Redis · Firebase · Flutter · Dart · Odoo ",
-    "category": "Fullstack",
-    "github": "https://github.com/FrancineMADOH/kleanet_api",
-    "lien": "https://bw-dev-services.brightwill.org/"
-  },
-  {
     "id": 3,
     "title": "BrightFret Tracking fret mobile",
     "description": "Solution fullstack pour transitaires Chine/Afrique. Module Odoo back-office : cycle complet des expéditions (air/mer), bordereaux, réclamations, étapes de transit, notifications email/SMS, page de tracking publique, rapports PDF. Application mobile Flutter (Riverpod, Hive offline-first, QR scan, i18n FR/EN) consommant l'API Odoo.",
@@ -28,26 +18,6 @@
     "category": "Fullstack",
     "github": "https://github.com/FrancineMADOH/BrightFret",
     "lien": "https://github.com/FrancineMADOH/BrightFret"
-  },
-  {
-    "id": 4,
-    "title": "VLCAM Plateforme touristique",
-    "description": "Suite de 3 modules Odoo pour la plateforme touristique VLCAM (Visiter Le Cameroun Avec Moi) : gestion des circuits touristiques avec réservation en ligne, hébergements et location de véhicules. Publication web intégrée, avis clients, conversion automatique en devis.",
-    "description_en": "Suite of 3 Odoo modules for the VLCAM tourism platform (Visit Cameroon With Me): tour circuit management with online booking, accommodations and vehicle rentals. Integrated web publishing, customer reviews, automatic quote conversion.",
-    "technologies": "Python · Odoo · XML · QWeb · JavaScript · SCSS",
-    "category": "Odoo / Python",
-    "github": "https://github.com/FrancineMADOH",
-    "lien": "https://basetest.vlcam.org/"
-  },
-  {
-    "id": 5,
-    "title": "Brightwill Plateforme ERP gérée",
-    "description": "Plateforme SaaS tout-en-un pour PME en croissance : ERP géré (point de vente, gestion commerciale, facturation automatisée, inventaire temps réel, site e-commerce), module BrightFret de suivi logistique (tracking temps réel, étiquettes QR code, chronologie de transit) et développement sur mesure (sites web, apps mobiles, intégrations). Tarification SaaS par paliers (Starter/Growth/Scale).",
-    "description_en": "All-in-one SaaS platform for growing SMEs: managed ERP (point of sale, sales management, automated invoicing, real-time inventory, e-commerce site), BrightFret logistics tracking module (real-time shipment tracking, QR code labels, transit timeline), and custom development (websites, mobile apps, integrations). Tiered SaaS pricing (Starter/Growth/Scale).",
-    "technologies": "Python · Odoo 19 · XML · QWeb · JavaScript · CSS · SCSS",
-    "category": "Odoo / Python",
-    "github": "https://github.com/FrancineMADOH",
-    "lien": "https://brightwill.org/fr"
   },
   {
     "id": 6,
