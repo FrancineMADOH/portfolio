@@ -91,5 +91,14 @@
     "previous": "Projet précédent",
     "next": "Projet suivant",
     "all_projects": "Tous les projets"
+  },
+  "home": {
+    "tagline": "Du diagnostic au déploiement",
+    "facet_design_title": "Je conçois et je pilote",
+    "facet_design_text": "Diagnostic, cadrage, recueil du besoin, spécifications et critères d’acceptation, pilotage par phases, recette, formation des équipes.",
+    "facet_build_title": "Je construis",
+    "facet_build_text": "Angular, Node.js et TypeScript, Python et Odoo, Flutter : des applications en production, avec l’IA comme levier d’accélération.",
+    "cta_projects": "Voir mes projets",
+    "cta_contact": "Me contacter"
   }
 }

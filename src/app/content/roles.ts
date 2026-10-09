@@ -1,14 +1,14 @@
 import { Role, RoleId } from './models';
 
-// Les 5 lentilles du portfolio. Accroches provisoires, revues en F5.1.
+// Les 5 lentilles du portfolio. Accroches revues en F5.1 (2026-10-09).
 export const ROLES: Record<RoleId, Role> = {
   'consultante': {
     id: 'consultante',
     title: { fr: 'Consultante en transformation digitale', en: 'Digital Transformation Consultant' },
     label: { fr: 'Consultante transformation digitale', en: 'Digital transformation consultant' },
     pitch: {
-      fr: 'Du diagnostic au déploiement : je conçois, je pilote et je construis la transformation digitale des organisations.',
-      en: 'From diagnosis to deployment: I design, lead and build the digital transformation of organisations.'
+      fr: 'Je conçois, je pilote et je construis la transformation digitale des organisations, du premier diagnostic à la mise en production.',
+      en: 'I design, lead and build the digital transformation of organisations, from the first diagnosis to production.'
     },
     projectOrder: ['christ-international-group', 'brightwill', 'nomoresilent', 'mungoum']
   },

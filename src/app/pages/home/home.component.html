@@ -1,0 +1,21 @@
+<div class="home">
+  <section class="intro" aria-labelledby="intro-title">
+    <p class="eyebrow">{{ 'home.tagline' | translate }}</p>
+    <h1 id="intro-title">{{ lang.localize(role().title) }}</h1>
+    <p class="intro__pitch">{{ lang.localize(role().pitch) }}</p>
+
+    <ul class="facets">
+      @for (facet of facets(); track facet.id) {
+        <li class="facet" [class.facet--build]="facet.id === 'build'">
+          <h2 class="facet__title">{{ facet.titleKey | translate }}</h2>
+          <p class="facet__text">{{ facet.textKey | translate }}</p>
+        </li>
+      }
+    </ul>
+
+    <div class="intro__actions">
+      <a class="btn btn--primary" [routerLink]="roleService.homePath()" fragment="projets">{{ 'home.cta_projects' | translate }}</a>
+      <a class="btn btn--secondary" [routerLink]="roleService.homePath()" fragment="contact">{{ 'home.cta_contact' | translate }}</a>
+    </div>
+  </section>
+</div>

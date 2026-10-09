@@ -91,5 +91,14 @@
     "previous": "Previous project",
     "next": "Next project",
     "all_projects": "All projects"
+  },
+  "home": {
+    "tagline": "From diagnosis to deployment",
+    "facet_design_title": "I design and lead",
+    "facet_design_text": "Diagnosis, scoping, requirements gathering, specifications and acceptance criteria, phased delivery, acceptance testing, team training.",
+    "facet_build_title": "I build",
+    "facet_build_text": "Angular, Node.js and TypeScript, Python and Odoo, Flutter: applications in production, with AI as an accelerator.",
+    "cta_projects": "See my projects",
+    "cta_contact": "Contact me"
   }
 }
