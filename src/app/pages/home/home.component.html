@@ -18,4 +18,13 @@
       <a class="btn btn--secondary" [routerLink]="roleService.homePath()" fragment="contact">{{ 'home.cta_contact' | translate }}</a>
     </div>
   </section>
+
+  <section class="figures" [attr.aria-label]="'home.figures' | translate">
+    @for (figure of figures; track figure.label.fr) {
+      <div class="key-figure">
+        <span class="key-figure__value">{{ figure.value }}</span>
+        <span class="key-figure__label">{{ lang.localize(figure.label) }}</span>
+      </div>
+    }
+  </section>
 </div>
