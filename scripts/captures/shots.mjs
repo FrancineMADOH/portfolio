@@ -48,9 +48,9 @@ export const SHOTS = [
   { slug: 'christ-international-group', name: 'agences', url: 'https://christinternationalgroup.com/fr/agences', viewports: ['desktop'], hide: ODOO_OVERLAYS },
   { slug: 'christ-international-group', name: 'accueil-chinois', url: 'https://christinternationalgroup.com/zh_CN', viewports: ['desktop'], hide: ODOO_OVERLAYS },
 
-  // F2.2 — BrightWill (brightwill.org)
-  { slug: 'brightwill', name: 'accueil', url: 'https://brightwill.org/fr', viewports: ['desktop', 'mobile'], hide: ODOO_OVERLAYS },
-  { slug: 'brightwill', name: 'fret', url: 'https://brightwill.org/fr/fret', viewports: ['desktop', 'mobile'], hide: ODOO_OVERLAYS },
+  // F2.2 — BrightWill (brightwill.org). Bureau uniquement : captures mobiles retirées à la demande de Francine (2026-10-09).
+  { slug: 'brightwill', name: 'accueil', url: 'https://brightwill.org/fr', viewports: ['desktop'], hide: ODOO_OVERLAYS },
+  { slug: 'brightwill', name: 'fret', url: 'https://brightwill.org/fr/fret', viewports: ['desktop'], hide: ODOO_OVERLAYS },
   { slug: 'brightwill', name: 'erp', url: 'https://brightwill.org/fr/erp', viewports: ['desktop'], hide: ODOO_OVERLAYS },
 
   // F2.2 — NoMoreSilent (nomoresilent.brightwill.org)

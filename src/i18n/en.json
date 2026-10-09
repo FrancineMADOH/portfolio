@@ -79,10 +79,6 @@
     "results": "Results",
     "gallery": "Screenshots",
     "stack": "Tech stack",
-    "type_doc": "Document",
-    "type_app": "App",
-    "type_module": "Module",
-    "type_site": "Website",
     "enlarge": "Enlarge screenshot:",
     "close": "Close",
     "my_role": "My role",
@@ -90,7 +86,9 @@
     "projects_nav": "Project navigation",
     "previous": "Previous project",
     "next": "Next project",
-    "all_projects": "All projects"
+    "all_projects": "All projects",
+    "deliverables_docs": "Consulting and delivery documents",
+    "deliverables_builds": "What was built"
   },
   "home": {
     "tagline": "From diagnosis to deployment",

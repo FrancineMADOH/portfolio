@@ -167,7 +167,7 @@ export const CHRIST_INTERNATIONAL_GROUP: CaseStudy = {
       }
     ]
   },
-  stack: ['Odoo 19', 'Python', 'QWeb', 'JavaScript', 'SCSS', 'PostgreSQL', 'API REST', 'PWA', 'Flutter', 'Docker'],
+  stack: ['Odoo 19', 'Python', 'XML', 'QWeb', 'JavaScript', 'SCSS', 'PostgreSQL', 'API REST', 'PWA', 'Flutter', 'Docker'],
   links: [
     { label: { fr: 'Voir le site', en: 'Visit the website' }, url: 'https://christinternationalgroup.com', kind: 'site' },
     { label: { fr: 'App BrightFret sur Google Play', en: 'BrightFret app on Google Play' }, url: 'https://play.google.com/store/apps/details?id=com.brightwill.brightfret', kind: 'play' }

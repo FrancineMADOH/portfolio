@@ -19,6 +19,19 @@
         <li class="badge">{{ tech }}</li>
       }
     </ul>
+    @if (p.links.length) {
+      <ul class="card-project__links">
+        @for (link of p.links; track link.url) {
+          <li>
+            @if (link.kind === 'play') {
+              <app-play-badge [url]="link.url" [small]="true" />
+            } @else {
+              <a class="card-project__link" [class.card-project__link--site]="link.kind === 'site'" [href]="link.url" target="_blank" rel="noopener">{{ lang.localize(link.label) }} ↗</a>
+            }
+          </li>
+        }
+      </ul>
+    }
     <span class="card-project__more" aria-hidden="true">{{ 'home.read_case' | translate }} →</span>
   </div>
 </article>

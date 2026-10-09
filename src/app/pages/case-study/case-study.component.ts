@@ -27,12 +27,11 @@ const SECTIONS: { id: SectionId; labelKey: string; hasContent: (p: CaseStudy) =>
   { id: 'stack', labelKey: 'case_study.stack', hasContent: p => p.stack.length > 0 }
 ];
 
-const DELIVERABLE_LABEL: Record<Deliverable['type'], string> = {
-  doc: 'case_study.type_doc',
-  app: 'case_study.type_app',
-  module: 'case_study.type_module',
-  site: 'case_study.type_site'
-};
+/** Livrables regroupés en deux cartes : les documents d'un côté, ce qui a été construit de l'autre. */
+const DELIVERABLE_GROUPS: { id: string; titleKey: string; types: Deliverable['type'][] }[] = [
+  { id: 'docs', titleKey: 'case_study.deliverables_docs', types: ['doc'] },
+  { id: 'builds', titleKey: 'case_study.deliverables_builds', types: ['site', 'module', 'app'] }
+];
 
 @Component({
   selector: 'app-case-study',
@@ -73,7 +72,14 @@ export class CaseStudyComponent {
   readonly isEmptyText = isEmptyText;
   readonly src = mediaSrc;
   readonly size = mediaSize;
-  readonly deliverableLabel = DELIVERABLE_LABEL;
+
+  /** Groupes de livrables non vides. */
+  readonly deliverableGroups = computed(() => {
+    const deliverables = this.project()?.deliverables ?? [];
+    return DELIVERABLE_GROUPS
+      .map(g => ({ ...g, items: deliverables.filter(d => g.types.includes(d.type)) }))
+      .filter(g => g.items.length > 0);
+  });
 
   has(id: SectionId): boolean {
     return this.sections().some(s => s.id === id);

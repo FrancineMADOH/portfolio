@@ -5,12 +5,13 @@ import { TranslatePipe } from '@ngx-translate/core';
 import { mediaSize, mediaSrc } from '../../content/media';
 import { CaseStudy, RoleId } from '../../content/models';
 import { LanguageService } from '../../services/language.service';
+import { PlayBadgeComponent } from '../../shared/play-badge/play-badge.component';
 
 /** Carte d'étude de cas de l'accueil, pleine largeur (visuel et texte côte à côte dès 1024 px). Toute la carte mène à l'étude de cas. */
 @Component({
   selector: 'app-project-card',
   standalone: true,
-  imports: [RouterLink, TranslatePipe],
+  imports: [RouterLink, TranslatePipe, PlayBadgeComponent],
   templateUrl: './project-card.component.html',
   styleUrl: './project-card.component.css'
 })

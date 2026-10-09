@@ -9,7 +9,7 @@ import { LanguageService } from '../../services/language.service';
   standalone: true,
   imports: [TranslatePipe],
   template: `
-    <a class="play-badge" [href]="url()" target="_blank" rel="noopener">
+    <a class="play-badge" [class.play-badge--small]="small()" [href]="url()" target="_blank" rel="noopener">
       <img [src]="badgeSrc()" [alt]="'media.play_badge_alt' | translate" width="646" height="250">
     </a>
   `,
@@ -17,6 +17,10 @@ import { LanguageService } from '../../services/language.service';
     .play-badge {
       display: inline-block;
       width: 150px;
+    }
+
+    .play-badge--small {
+      width: 120px;
     }
 
     .play-badge img {
@@ -29,6 +33,8 @@ export class PlayBadgeComponent {
   private readonly lang = inject(LanguageService);
 
   readonly url = input.required<string>();
+  /** Version réduite, pour les cartes de projets. */
+  readonly small = input<boolean>(false);
 
   readonly badgeSrc = computed(() => `/images/badges/google-play-${this.lang.currentLang()}.webp`);
 }

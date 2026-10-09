@@ -103,14 +103,18 @@
           @if (has('livrables')) {
             <section id="livrables" class="case-section">
               <h2>{{ 'case_study.deliverables' | translate }}</h2>
-              <ul class="deliverables">
-                @for (d of p.deliverables; track d.label.fr) {
-                  <li>
-                    <span class="deliverables__type">{{ deliverableLabel[d.type] | translate }}</span>
-                    <span>{{ lang.localize(d.label) }}</span>
-                  </li>
+              <div class="deliverables">
+                @for (group of deliverableGroups(); track group.id) {
+                  <div class="deliverables__group" [class.deliverables__group--builds]="group.id === 'builds'">
+                    <h3 class="deliverables__title">{{ group.titleKey | translate }}</h3>
+                    <ul>
+                      @for (d of group.items; track d.label.fr) {
+                        <li>{{ lang.localize(d.label) }}</li>
+                      }
+                    </ul>
+                  </div>
                 }
-              </ul>
+              </div>
             </section>
           }
 

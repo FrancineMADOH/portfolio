@@ -79,10 +79,6 @@
     "results": "Résultats",
     "gallery": "Captures",
     "stack": "Stack technique",
-    "type_doc": "Document",
-    "type_app": "Application",
-    "type_module": "Module",
-    "type_site": "Site web",
     "enlarge": "Agrandir la capture :",
     "close": "Fermer",
     "my_role": "Mon rôle",
@@ -90,7 +86,9 @@
     "projects_nav": "Navigation entre les projets",
     "previous": "Projet précédent",
     "next": "Projet suivant",
-    "all_projects": "Tous les projets"
+    "all_projects": "Tous les projets",
+    "deliverables_docs": "Documents de conseil et de pilotage",
+    "deliverables_builds": "Réalisations"
   },
   "home": {
     "tagline": "Du diagnostic au déploiement",

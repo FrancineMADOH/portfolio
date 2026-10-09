@@ -150,7 +150,7 @@ export const BRIGHTWILL: CaseStudy = {
       }
     ]
   },
-  stack: ['Odoo 19', 'Python', 'QWeb', 'SCSS', 'JavaScript', 'PostgreSQL'],
+  stack: ['Odoo 19', 'Python', 'XML', 'QWeb', 'SCSS', 'JavaScript', 'PostgreSQL'],
   links: [
     { label: { fr: 'Voir le site', en: 'Visit the website' }, url: 'https://brightwill.org', kind: 'site' },
     { label: { fr: 'App BrightFret sur Google Play', en: 'BrightFret app on Google Play' }, url: 'https://play.google.com/store/apps/details?id=com.brightwill.brightfret', kind: 'play' }
@@ -158,8 +158,6 @@ export const BRIGHTWILL: CaseStudy = {
   media: [
     { src: 'images/projects/brightwill/accueil-desktop.webp', alt: { fr: 'Page d’accueil de brightwill.org présentant les 3 offres', en: 'brightwill.org home page presenting the 3 offers' }, kind: 'desktop' },
     { src: 'images/projects/brightwill/fret-desktop.webp', alt: { fr: 'Page BrightFret de brightwill.org', en: 'BrightFret page on brightwill.org' }, kind: 'desktop' },
-    { src: 'images/projects/brightwill/erp-desktop.webp', alt: { fr: 'Page de l’offre ERP géré', en: 'Managed ERP offer page' }, kind: 'desktop' },
-    { src: 'images/projects/brightwill/accueil-mobile.webp', alt: { fr: 'Page d’accueil de brightwill.org sur mobile', en: 'brightwill.org home page on mobile' }, kind: 'mobile' },
-    { src: 'images/projects/brightwill/fret-mobile.webp', alt: { fr: 'Page BrightFret sur mobile', en: 'BrightFret page on mobile' }, kind: 'mobile' }
+    { src: 'images/projects/brightwill/erp-desktop.webp', alt: { fr: 'Page de l’offre ERP géré', en: 'Managed ERP offer page' }, kind: 'desktop' }
   ]
 };
