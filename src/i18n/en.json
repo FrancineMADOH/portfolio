@@ -41,5 +41,10 @@
   "footer": {
     "github": "GitHub",
     "linkedin": "LinkedIn"
+  },
+  "NOT_FOUND": {
+    "TITLE": "Page not found",
+    "TEXT": "This page does not exist or has been moved.",
+    "BACK": "Back to home"
   }
 }

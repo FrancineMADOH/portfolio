@@ -1,0 +1,6 @@
+/* Mise en page minimale des pages en squelette (F0.6), remplacée par la mise en page de la phase 1. */
+.placeholder {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--space-8) var(--space-4);
+}

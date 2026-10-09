@@ -41,5 +41,10 @@
   "footer": {
     "github": "GitHub",
     "linkedin": "LinkedIn"
+  },
+  "NOT_FOUND": {
+    "TITLE": "Page introuvable",
+    "TEXT": "Cette page n’existe pas ou a été déplacée.",
+    "BACK": "Retour à l’accueil"
   }
 }
