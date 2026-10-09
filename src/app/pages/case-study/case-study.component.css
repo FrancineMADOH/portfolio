@@ -1,0 +1,108 @@
+.case {
+  max-width: var(--content-wide);
+  margin: 0 auto;
+  padding: var(--space-7) var(--space-4) var(--space-8);
+}
+
+/* En-tête : texte puis visuel (capture de site). Pour une app, texte et téléphone côte à côte sur grand écran. */
+.case-hero {
+  display: grid;
+  gap: var(--space-7);
+}
+
+.case-hero h1 {
+  margin-bottom: var(--space-3);
+}
+
+.case-hero__status {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #2E7D4F;
+  box-shadow: 0 0 0 4px rgb(46 125 79 / 0.15);
+}
+
+.case-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+}
+
+.case-hero__visual {
+  min-width: 0;
+}
+
+.case-hero--mobile .case-hero__visual {
+  display: flex;
+  justify-content: center;
+}
+
+/* Cadre de navigateur autour d'une capture de site */
+.browser {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-md);
+}
+
+.browser__bar {
+  display: flex;
+  gap: 6px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--color-border);
+  background: #EFEBE3;
+}
+
+.browser__bar span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #D3CCBF;
+}
+
+.browser img {
+  width: 100%;
+  height: auto;
+}
+
+/* Chiffres clés */
+.case-figures {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-5);
+  margin-top: var(--space-7);
+  padding: var(--space-5) 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+@media (min-width: 768px) {
+  .case {
+    padding: var(--space-8) var(--space-6) var(--space-9);
+  }
+
+  .case-figures {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1200px) {
+  .case-hero--mobile {
+    grid-template-columns: minmax(0, 1fr) 280px;
+    align-items: center;
+  }
+}

@@ -7,7 +7,7 @@ import { Component, input } from '@angular/core';
   template: `
     <figure class="phone">
       <div class="phone__screen">
-        <img [src]="src()" [alt]="alt()" [attr.width]="width()" [attr.height]="height()" loading="lazy" decoding="async">
+        <img [src]="src()" [alt]="alt()" [attr.width]="width()" [attr.height]="height()" [attr.loading]="eager() ? 'eager' : 'lazy'" [attr.fetchpriority]="eager() ? 'high' : null" decoding="async">
       </div>
     </figure>
   `,
@@ -19,4 +19,6 @@ export class PhoneFrameComponent {
   /** Dimensions réelles de l'image, pour réserver sa place avant chargement. */
   readonly width = input<number>(732);
   readonly height = input<number>(1600);
+  /** Image visible dès l'arrivée sur la page (visuel principal) : chargée en priorité. */
+  readonly eager = input<boolean>(false);
 }

@@ -122,9 +122,9 @@ export const MUNGOUM: CaseStudy = {
     { label: { fr: 'Code sur GitHub', en: 'Code on GitHub' }, url: 'https://github.com/FrancineMADOH/mungoum', kind: 'github' }
   ],
   media: [
-    { src: 'images/projects/mungoum/app-aujourdhui.webp', alt: { fr: 'Mungoum : le jour nguemba du jour', en: 'Mungoum: today’s Nguemba day' }, kind: 'mobile' },
-    { src: 'images/projects/mungoum/app-calendrier.webp', alt: { fr: 'Mungoum : calendrier du mois avec les jours nguemba', en: 'Mungoum: monthly calendar with Nguemba days' }, kind: 'mobile' },
-    { src: 'images/projects/mungoum/app-8-jours.webp', alt: { fr: 'Mungoum : les 8 jours du cycle et les jours de marché', en: 'Mungoum: the 8 days of the cycle and market days' }, kind: 'mobile' },
-    { src: 'images/projects/mungoum/app-a-propos.webp', alt: { fr: 'Mungoum : à propos de l’application', en: 'Mungoum: about the app' }, kind: 'mobile' }
+    { src: 'images/projects/mungoum/app-aujourdhui.webp', alt: { fr: 'Mungoum : le jour nguemba du jour', en: 'Mungoum: today’s Nguemba day' }, kind: 'mobile', width: 800, height: 1600 },
+    { src: 'images/projects/mungoum/app-calendrier.webp', alt: { fr: 'Mungoum : calendrier du mois avec les jours nguemba', en: 'Mungoum: monthly calendar with Nguemba days' }, kind: 'mobile', width: 800, height: 1600 },
+    { src: 'images/projects/mungoum/app-8-jours.webp', alt: { fr: 'Mungoum : les 8 jours du cycle et les jours de marché', en: 'Mungoum: the 8 days of the cycle and market days' }, kind: 'mobile', width: 800, height: 1600 },
+    { src: 'images/projects/mungoum/app-a-propos.webp', alt: { fr: 'Mungoum : à propos de l’application', en: 'Mungoum: about the app' }, kind: 'mobile', width: 800, height: 1600 }
   ]
 };

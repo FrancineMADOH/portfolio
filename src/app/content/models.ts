@@ -42,6 +42,9 @@ export interface ProjectMedia {
   src: string;
   alt: L10n;
   kind: 'desktop' | 'mobile';
+  /** Dimensions réelles en pixels. Par défaut : 1440 × 900 (bureau), 780 × 1688 (mobile). */
+  width?: number;
+  height?: number;
 }
 
 export interface CaseStudy {

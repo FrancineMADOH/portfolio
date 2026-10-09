@@ -16,7 +16,7 @@ import { LanguageService } from '../../services/language.service';
   styles: `
     .play-badge {
       display: inline-block;
-      width: 180px;
+      width: 150px;
     }
 
     .play-badge img {

@@ -1,0 +1,55 @@
+@if (project(); as p) {
+  <article class="case">
+    <header class="case-hero" [class.case-hero--mobile]="heroMedia()?.kind === 'mobile'">
+      <div class="case-hero__text">
+        <p class="eyebrow">{{ lang.localize(p.client) }} · {{ lang.localize(p.period) }}</p>
+        <h1>{{ lang.localize(p.title) }}</h1>
+        <p class="case-hero__status"><span class="status-dot" aria-hidden="true"></span>{{ lang.localize(p.status) }}</p>
+        @if (!isEmptyText(p.summary)) {
+          <p class="lead">{{ lang.localize(p.summary) }}</p>
+        }
+        @if (p.links.length) {
+          <div class="case-hero__actions">
+            @for (link of p.links; track link.url) {
+              @switch (link.kind) {
+                @case ('play') {
+                  <app-play-badge [url]="link.url" />
+                }
+                @case ('site') {
+                  <a class="btn btn--primary" [href]="link.url" target="_blank" rel="noopener">{{ lang.localize(link.label) }}</a>
+                }
+                @default {
+                  <a class="btn btn--secondary" [href]="link.url" target="_blank" rel="noopener">{{ lang.localize(link.label) }}</a>
+                }
+              }
+            }
+          </div>
+        }
+      </div>
+
+      @if (heroMedia(); as m) {
+        <div class="case-hero__visual">
+          @if (m.kind === 'mobile') {
+            <app-phone-frame [src]="src(m)" [alt]="lang.localize(m.alt)" [width]="size(m).width" [height]="size(m).height" [eager]="true" />
+          } @else {
+            <figure class="browser">
+              <div class="browser__bar" aria-hidden="true"><span></span><span></span><span></span></div>
+              <img [src]="src(m)" [alt]="lang.localize(m.alt)" [width]="size(m).width" [height]="size(m).height" fetchpriority="high" decoding="async">
+            </figure>
+          }
+        </div>
+      }
+    </header>
+
+    @if (p.keyFigures.length) {
+      <section class="case-figures" [attr.aria-label]="'case_study.key_figures' | translate">
+        @for (figure of p.keyFigures; track figure.value + figure.label.fr) {
+          <div class="key-figure">
+            <span class="key-figure__value">{{ figure.value }}</span>
+            <span class="key-figure__label">{{ lang.localize(figure.label) }}</span>
+          </div>
+        }
+      </section>
+    }
+  </article>
+}

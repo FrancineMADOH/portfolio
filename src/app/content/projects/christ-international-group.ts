@@ -182,7 +182,7 @@ export const CHRIST_INTERNATIONAL_GROUP: CaseStudy = {
     { src: 'images/projects/christ-international-group/bo-manifeste-desktop.webp', alt: { fr: 'Back-office BrightFret : bordereau de groupage', en: 'BrightFret back office: consolidation manifest' }, kind: 'desktop' },
     { src: 'images/projects/christ-international-group/rapport-etiquette-desktop.webp', alt: { fr: 'Étiquette de colis avec code QR', en: 'Parcel label with QR code' }, kind: 'desktop' },
     { src: 'images/projects/christ-international-group/pwa-ops-bordereaux-mobile.webp', alt: { fr: 'PWA opérateurs : liste des bordereaux', en: 'Operator PWA: list of manifests' }, kind: 'mobile' },
-    { src: 'images/projects/christ-international-group/app-brightfret-accueil.webp', alt: { fr: 'App BrightFret : suivi d’un colis par code ou scan QR', en: 'BrightFret app: track a parcel by code or QR scan' }, kind: 'mobile' },
-    { src: 'images/projects/christ-international-group/app-brightfret-suivi.webp', alt: { fr: 'App BrightFret : chronologie de suivi d’un colis', en: 'BrightFret app: parcel tracking timeline' }, kind: 'mobile' }
+    { src: 'images/projects/christ-international-group/app-brightfret-accueil.webp', alt: { fr: 'App BrightFret : suivi d’un colis par code ou scan QR', en: 'BrightFret app: track a parcel by code or QR scan' }, kind: 'mobile', width: 732, height: 1600 },
+    { src: 'images/projects/christ-international-group/app-brightfret-suivi.webp', alt: { fr: 'App BrightFret : chronologie de suivi d’un colis', en: 'BrightFret app: parcel tracking timeline' }, kind: 'mobile', width: 732, height: 1600 }
   ]
 };

@@ -68,5 +68,8 @@
   },
   "media": {
     "play_badge_alt": "Disponible sur Google Play"
+  },
+  "case_study": {
+    "key_figures": "Chiffres clés"
   }
 }
