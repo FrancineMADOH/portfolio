@@ -2,7 +2,8 @@ import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { Injectable, PLATFORM_ID, afterNextRender, inject, signal } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
-export type Lang = 'fr' | 'en';
+import { localize } from '../content/localize';
+import { L10n, Lang } from '../content/models';
 
 export const DEFAULT_LANG: Lang = 'fr';
 const STORAGE_KEY = 'lang';
@@ -38,6 +39,11 @@ export class LanguageService {
         // Stockage indisponible (navigation privée, données bloquées) : le choix n'est pas mémorisé.
       }
     }
+  }
+
+  /** Texte dans la langue active. Lit le signal : réactif dans un template ou un `computed`. */
+  localize(text: L10n): string {
+    return localize(text, this.currentLang());
   }
 
   toggle(): void {
