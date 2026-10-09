@@ -1,4 +1,29 @@
-<aside class="sidebar">
+<!-- En-tête compact, visible sous 1024 px -->
+<header class="mobile-bar">
+  <a class="mobile-bar__identity" [routerLink]="roleService.homePath()">
+    <span class="mobile-bar__name">Francine MADOH</span>
+    <span class="mobile-bar__title">{{ lang.localize(roleService.activeRole().title) }}</span>
+  </a>
+  <button #menuButton type="button" class="menu-button" (click)="openMenu()"
+          aria-controls="site-menu" [attr.aria-expanded]="menuOpen()">
+    <span class="menu-button__icon" aria-hidden="true"></span>
+    <span class="visually-hidden">{{ 'sidebar.open_menu' | translate }}</span>
+  </button>
+</header>
+
+@if (menuOpen()) {
+  <div class="backdrop" (click)="closeMenu()" aria-hidden="true"></div>
+}
+
+<!-- Barre latérale sur bureau, tiroir sur mobile -->
+<aside #drawer id="site-menu" class="sidebar" [class.is-open]="menuOpen()"
+       [attr.role]="menuOpen() ? 'dialog' : null" [attr.aria-modal]="menuOpen() ? 'true' : null"
+       [attr.aria-label]="menuOpen() ? ('sidebar.menu' | translate) : null"
+       (click)="onDrawerClick($event)" (keydown)="onDrawerKeydown($event)">
+  <button type="button" class="drawer-close" (click)="closeMenu()">
+    <span aria-hidden="true">×</span>
+    <span class="visually-hidden">{{ 'sidebar.close_menu' | translate }}</span>
+  </button>
   <a class="sidebar__identity" [routerLink]="roleService.homePath()">
     <img class="sidebar__photo" src="/profile.jpeg" [alt]="'sidebar.photo_alt' | translate" width="96" height="96">
     <span class="sidebar__name">Francine MADOH</span>

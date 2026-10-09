@@ -59,6 +59,9 @@
     "roles_label": "Voir mon profil de",
     "switch_lang": "Switch to English",
     "links": "Liens",
-    "email": "E-mail"
+    "email": "E-mail",
+    "menu": "Menu",
+    "open_menu": "Ouvrir le menu",
+    "close_menu": "Fermer le menu"
   }
 }
