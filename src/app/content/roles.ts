@@ -27,8 +27,8 @@ export const ROLES: Record<RoleId, Role> = {
     title: { fr: 'Analyste fonctionnelle / Business analyst', en: 'Functional Analyst / Business Analyst' },
     label: { fr: 'Analyste fonctionnelle / BA', en: 'Functional / business analyst' },
     pitch: {
-      fr: 'Je transforme des besoins exprimés en notes vocales et en e-mails en spécifications claires, testables et priorisées.',
-      en: 'I turn needs expressed in voice notes and e-mails into clear, testable and prioritised specifications.'
+      fr: 'Je m’adapte à la façon dont chaque client exprime son besoin et je le transforme en spécifications claires, testables et priorisées.',
+      en: 'I adapt to the way each client expresses their needs and turn them into clear, testable and prioritised specifications.'
     },
     projectOrder: ['christ-international-group', 'brightwill', 'nomoresilent', 'mungoum']
   },

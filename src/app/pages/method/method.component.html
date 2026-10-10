@@ -1,0 +1,58 @@
+<article class="method-page">
+  <header class="method-page__header">
+    <p class="eyebrow">{{ 'method.eyebrow' | translate }}</p>
+    <h1>{{ 'method.title' | translate }}</h1>
+    <p class="lead">{{ 'method.lead' | translate }}</p>
+  </header>
+
+  <ol class="steps">
+    @for (step of steps; track step.id; let i = $index) {
+      <li class="step" [id]="step.id">
+        <div class="step__head">
+          <span class="step__number" aria-hidden="true">{{ i + 1 }}</span>
+          <h2 class="step__title">{{ lang.localize(step.title) }}</h2>
+        </div>
+        <dl class="step__body">
+          <div>
+            <dt>{{ 'method.deliverable' | translate }}</dt>
+            <dd>{{ lang.localize(step.deliverable) }}</dd>
+          </div>
+          <div>
+            <dt>{{ 'method.question' | translate }}</dt>
+            <dd class="step__question">{{ lang.localize(step.question) }}</dd>
+          </div>
+          <div class="step__example">
+            <dt>{{ 'method.example' | translate }}</dt>
+            <dd>{{ lang.localize(step.example) }}</dd>
+          </div>
+        </dl>
+      </li>
+    }
+  </ol>
+
+  <section class="sector" aria-labelledby="sector-title">
+    <h2 id="sector-title">{{ 'method.sector_title' | translate }}</h2>
+    <div class="sector__grid">
+      <div class="sector__card">
+        <h3>{{ 'method.changes' | translate }}</h3>
+        <ul>
+          @for (item of changes; track item.fr) {
+            <li>{{ lang.localize(item) }}</li>
+          }
+        </ul>
+      </div>
+      <div class="sector__card sector__card--constant">
+        <h3>{{ 'method.constants' | translate }}</h3>
+        <ul>
+          @for (item of constants; track item.fr) {
+            <li>{{ lang.localize(item) }}</li>
+          }
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="method-page__cta">
+    <a class="btn btn--primary" routerLink="/projets/christ-international-group">{{ 'method.cta_case' | translate }}</a>
+  </div>
+</article>

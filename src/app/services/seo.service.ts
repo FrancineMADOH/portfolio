@@ -17,6 +17,8 @@ export interface PageSeo {
   /** Chemin de la page de référence quand deux URL ont le même contenu (sinon `path`). */
   canonicalPath?: string;
   lang: Lang;
+  /** Page à ne pas indexer (404). */
+  noindex?: boolean;
 }
 
 /**
@@ -47,6 +49,12 @@ export class SeoService {
     this.meta.updateTag({ name: 'twitter:description', content: page.description });
 
     this.setCanonical(canonical);
+
+    if (page.noindex) {
+      this.meta.updateTag({ name: 'robots', content: 'noindex' });
+    } else {
+      this.meta.removeTag('name="robots"');
+    }
   }
 
   private setCanonical(href: string): void {

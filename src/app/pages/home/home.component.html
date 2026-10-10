@@ -82,4 +82,15 @@
     </ol>
     <a class="btn btn--secondary" routerLink="/methode">{{ 'home.method_cta' | translate }}</a>
   </section>
+
+  <section id="contact" class="home-section contact" aria-labelledby="contact-title">
+    <p class="eyebrow">{{ 'home.contact_eyebrow' | translate }}</p>
+    <h2 id="contact-title">{{ 'home.contact_title' | translate }}</h2>
+    <p class="home-section__lead">{{ 'home.contact_lead' | translate }}</p>
+    <p class="contact__availability"><span class="contact__dot" aria-hidden="true"></span>{{ lang.localize(availability) }}</p>
+    <div class="contact__actions">
+      <a class="btn btn--primary" [href]="links.linkedin" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="btn btn--secondary" [href]="lang.localize(cvFiles)" [attr.download]="'CV-Francine-MADOH-' + lang.currentLang().toUpperCase() + '.pdf'">{{ 'home.contact_cv' | translate }}</a>
+    </div>
+  </section>
 </div>

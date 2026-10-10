@@ -30,12 +30,12 @@ export const EXPERIENCES: Experience[] = [
   },
   {
     organisation: 'Zetos France',
-    title: { fr: 'Développeuse IA, assistante du CTO (stage)', en: 'AI Developer, assistant to the CTO (internship)' },
+    title: { fr: 'Développeuse IA, assistante du CTO', en: 'AI Developer, assistant to the CTO' },
     period: { fr: 'Nov. 2025 – avr. 2026', en: 'Nov 2025 – Apr 2026' },
     location: { fr: 'Paris', en: 'Paris' },
     highlights: [
       {
-        text: { fr: 'Trois agents IA (DIFY) intégrés à Nextcloud : analyse d’appels d’offres, estimation de charges, rédaction de mémoires techniques. Temps de traitement réduit d’environ 50 %.', en: 'Three AI agents (DIFY) integrated into Nextcloud: tender analysis, workload estimation, technical proposal writing. Processing time cut by about 50%.' },
+        text: { fr: 'Trois agents IA (DIFY) intégrés à Nextcloud : analyse d’appels d’offres, estimation de charges, rédaction de mémoires techniques. L’analyse d’un appel d’offres passe de 4-6 h à 2 h.', en: 'Three AI agents (DIFY) integrated into Nextcloud: tender analysis, workload estimation, technical proposal writing. Analysing a tender drops from 4-6 hours to 2 hours.' },
         roles: ['developpeuse', 'consultante']
       },
       {

@@ -60,11 +60,11 @@ export const SKILL_BLOCKS: SkillBlock[] = [
     groups: [
       {
         title: { fr: 'Front-end', en: 'Front end' },
-        items: [same('Angular'), same('TypeScript'), same('RxJS'), same('Tailwind CSS'), { fr: 'i18n et pré-rendu SSR', en: 'i18n and SSR pre-rendering' }]
+        items: [same('Angular'), same('TypeScript'), same('HTML'), same('CSS'), same('RxJS'), same('Bootstrap')]
       },
       {
         title: { fr: 'Back-end', en: 'Back end' },
-        items: [same('Node.js'), same('Express'), same('Fastify'), same('API REST'), same('JWT'), same('Zod'), same('Jest')]
+        items: [same('Node.js'), same('Express'), same('Fastify'), same('API REST'), same('JWT'), same('Jasmine')]
       },
       {
         title: { fr: 'Odoo', en: 'Odoo' },
@@ -72,15 +72,15 @@ export const SKILL_BLOCKS: SkillBlock[] = [
       },
       {
         title: { fr: 'Mobile', en: 'Mobile' },
-        items: [same('Flutter'), same('Dart'), same('Riverpod'), same('go_router')]
+        items: [same('Flutter'), same('Dart')]
       },
       {
         title: { fr: 'IA', en: 'AI' },
-        items: [same('Claude Code'), same('DIFY'), same('Anthropic SDK'), same('Groq'), same('Gemini'), same('Ollama'), same('Whisper'), { fr: 'Prompt et context engineering', en: 'Prompt and context engineering' }]
+        items: [same('Claude Code'), same('DIFY'), same('n8n'), same('Anthropic SDK'), same('Gemini'), { fr: 'Prompt et context engineering', en: 'Prompt and context engineering' }]
       },
       {
         title: { fr: 'Données et déploiement', en: 'Data and deployment' },
-        items: [same('SQL'), same('PostgreSQL'), same('MySQL'), same('Redis'), same('Docker'), same('NGINX'), same('GitHub Actions')]
+        items: [same('SQL'), same('PostgreSQL'), same('MySQL'), same('NGINX')]
       }
     ]
   }

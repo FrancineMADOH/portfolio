@@ -1,25 +1,8 @@
 {
-  "contact": {
-    "title": "Contact me",
-    "subtitle": "Let's discuss your needs or a collaboration.",
-    "label_email": "Email address",
-    "placeholder_email": "e.g. contact@mail.com",
-    "label_message": "Your message",
-    "placeholder_message": "Write your message…",
-    "send": "Send",
-    "sending": "Sending…",
-    "success": "Message sent! I'll get back to you within 48 hours.",
-    "error": "Error sending. Please try again or contact me directly.",
-    "err_email_required": "Email is required.",
-    "err_email_invalid": "Invalid email format.",
-    "err_msg_required": "Message is required.",
-    "err_msg_minlength": "At least 10 characters."
-  },
   "footer": {
     "rights": "All rights reserved.",
     "built_with": "Built with Angular, SSR pre-rendered.",
-    "links": "Links",
-    "email": "E-mail"
+    "links": "Links"
   },
   "not_found": {
     "title": "Page not found",
@@ -38,7 +21,6 @@
     "roles_label": "View my profile as",
     "switch_lang": "Passer en français",
     "links": "Links",
-    "email": "E-mail",
     "menu": "Menu",
     "open_menu": "Open menu",
     "close_menu": "Close menu"
@@ -92,6 +74,22 @@
     "method_eyebrow": "A reusable framework, from one sector to another",
     "method_title": "My method",
     "method_lead": "Nine steps, each with its deliverable and its control question, proven on the transformation of Christ International Group.",
-    "method_cta": "Discover the method"
+    "method_cta": "Discover the method",
+    "contact_eyebrow": "Let’s work together",
+    "contact_title": "Contact",
+    "contact_lead": "A position, an assignment or a question about one of these projects: reach me on LinkedIn.",
+    "contact_cv": "Download my CV"
+  },
+  "method": {
+    "eyebrow": "A reusable framework, from one sector to another",
+    "title": "My 9-step method",
+    "lead": "From pre-sales to go-live: for each step, what I deliver, the question I use as a safeguard, and what it produced on the Christ International Group transformation.",
+    "deliverable": "Deliverable",
+    "question": "Control question",
+    "example": "On the CIG project",
+    "sector_title": "From one sector to another",
+    "changes": "What changes",
+    "constants": "What stays the same",
+    "cta_case": "Read the CIG case study"
   }
 }

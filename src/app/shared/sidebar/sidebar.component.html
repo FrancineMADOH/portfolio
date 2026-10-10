@@ -30,6 +30,7 @@
   </a>
   <p class="sidebar__title">{{ lang.localize(roleService.activeRole().title) }}</p>
   <p class="sidebar__tagline">{{ 'sidebar.tagline' | translate }}</p>
+  <p class="availability"><span class="availability__dot" aria-hidden="true"></span>{{ lang.localize(availability) }}</p>
 
   <nav class="sidebar__nav" [attr.aria-label]="'sidebar.main_nav' | translate">
     <a [routerLink]="roleService.homePath()" fragment="projets" [class.is-active]="activeSection() === 'projets'">{{ 'sidebar.nav_projects' | translate }}</a>
@@ -61,7 +62,6 @@
     <ul class="sidebar__links" [attr.aria-label]="'sidebar.links' | translate">
       <li><a [href]="links.github" target="_blank" rel="noopener">GitHub</a></li>
       <li><a [href]="links.linkedin" target="_blank" rel="noopener">LinkedIn</a></li>
-      <li><a [href]="links.email">{{ 'sidebar.email' | translate }}</a></li>
     </ul>
   </div>
 </aside>

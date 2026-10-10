@@ -40,8 +40,8 @@ export const CHRIST_INTERNATIONAL_GROUP: CaseStudy = {
       en: 'A global diagnosis on 3 axes before any quote: web and content, freight and logistics, sales and branches. Every need goes through the same question: does standard Odoo already cover it?'
     },
     {
-      fr: 'Recueil du besoin dans les canaux du client : notes vocales WhatsApp transcrites avec Whisper, flyers et e-mails de la direction, structurés en cahier des charges page par page.',
-      en: 'Requirements gathered through the client’s own channels: WhatsApp voice notes transcribed with Whisper, flyers and e-mails from management, structured into a page-by-page specification.'
+      fr: 'Recueil du besoin au plus près de la façon de communiquer du client, puis structuré en cahier des charges page par page.',
+      en: 'Requirements gathered as close as possible to the way the client communicates, then structured into a page-by-page specification.'
     },
     {
       fr: 'Feuille de route en 3 phases vendables : site web multilingue, déploiement de BrightFret, puis recrutement. Le hors-périmètre est écrit noir sur blanc pour éviter les dérives.',
@@ -50,16 +50,16 @@ export const CHRIST_INTERNATIONAL_GROUP: CaseStudy = {
   ],
   solution: [
     {
-      fr: 'Phase 1 — Site institutionnel multilingue (français, anglais, chinois) sur Odoo 19 : une page par entité, services, agences, calendrier des départs, actualités, FAQ, formulaires de devis et de pro forma, espace client sécurisé.',
-      en: 'Phase 1 — Multilingual corporate website (French, English, Chinese) on Odoo 19: one page per entity, services, branches, departure calendar, news, FAQ, quote and pro forma forms, secure customer portal.'
+      fr: 'Phase 1 : site institutionnel multilingue (français, anglais, chinois) sur Odoo 19 : une page par entité, services, agences, calendrier des départs, actualités, FAQ, formulaires de devis et de pro forma, espace client sécurisé.',
+      en: 'Phase 1: multilingual corporate website (French, English, Chinese) on Odoo 19: one page per entity, services, branches, departure calendar, news, FAQ, quote and pro forma forms, secure customer portal.'
     },
     {
       fr: 'Contenu géré en autonomie par l’équipe CIG : départs, agences, services, témoignages et FAQ sont des fiches éditables, et une section sans contenu publié disparaît d’elle-même. Deux niveaux de droits protègent la structure du site.',
       en: 'Content managed independently by the CIG team: departures, branches, services, testimonials and FAQ are editable records, and a section with no published content hides itself. Two permission levels protect the site structure.'
     },
     {
-      fr: 'Phase 2 — BrightFret, la solution de gestion du fret : cycle de vie complet des expéditions aériennes et maritimes, 12 étapes de transit, codes de suivi et étiquettes QR, bordereaux de groupage, réclamations, notifications e-mail et SMS.',
-      en: 'Phase 2 — BrightFret, the freight management solution: full lifecycle of air and sea shipments, 12 transit stages, tracking codes and QR labels, consolidation manifests, claims, e-mail and SMS notifications.'
+      fr: 'Phase 2 : BrightFret, la solution de gestion du fret : cycle de vie complet des expéditions aériennes et maritimes, 12 étapes de transit, codes de suivi et étiquettes QR, bordereaux de groupage, réclamations, notifications e-mail et SMS.',
+      en: 'Phase 2: BrightFret, the freight management solution: full lifecycle of air and sea shipments, 12 transit stages, tracking codes and QR labels, consolidation manifests, claims, e-mail and SMS notifications.'
     },
     {
       fr: 'Une PWA pour les opérateurs terrain (scan caméra ou douchette, bordereaux) et une application Android publiée sur Google Play, avec laquelle les clients de CIG suivent leurs colis en autonomie.',
@@ -69,7 +69,7 @@ export const CHRIST_INTERNATIONAL_GROUP: CaseStudy = {
   deliverables: [
     { label: { fr: 'Diagnostic de transformation digitale sur 3 axes', en: 'Digital transformation diagnosis on 3 axes' }, type: 'doc' },
     { label: { fr: 'Propositions technico-financières par phase', en: 'Technical and financial proposals per phase' }, type: 'doc' },
-    { label: { fr: 'Cahier des charges issu des notes vocales du client', en: 'Specification built from the client’s voice notes' }, type: 'doc' },
+    { label: { fr: 'Cahier des charges structuré à partir des échanges avec le client', en: 'Specification structured from exchanges with the client' }, type: 'doc' },
     { label: { fr: 'Plan de développement : 57 fonctionnalités, critères d’acceptation testables', en: 'Development plan: 57 features, testable acceptance criteria' }, type: 'doc' },
     { label: { fr: 'Cahier de recette : 345 cas de test', en: 'Test book: 345 test cases' }, type: 'doc' },
     { label: { fr: 'Manuel utilisateur et manuel administrateur', en: 'User manual and administrator manual' }, type: 'doc' },
@@ -126,8 +126,8 @@ export const CHRIST_INTERNATIONAL_GROUP: CaseStudy = {
     ],
     'business-analyst': [
       {
-        fr: 'Cahier des charges construit à partir de notes vocales WhatsApp, de flyers et d’e-mails.',
-        en: 'Specification built from WhatsApp voice notes, flyers and e-mails.'
+        fr: 'Adaptation à la façon de communiquer du client, échanges structurés en cahier des charges.',
+        en: 'Adapting to the way the client communicates, with exchanges structured into a specification.'
       },
       {
         fr: 'Critères d’acceptation testables pour chaque fonctionnalité et liste des livrables attendus du client.',

@@ -170,6 +170,69 @@
   }
 }
 
+/* Contact : bandeau final, sans formulaire */
+.contact {
+  padding: var(--space-7) var(--space-5);
+  border-radius: var(--radius-lg);
+  background: var(--color-ink);
+  color: var(--color-on-ink);
+}
+
+.contact h2 {
+  color: var(--color-on-ink);
+}
+
+.contact .eyebrow {
+  color: var(--color-accent-on-ink);
+}
+
+.contact .home-section__lead {
+  color: var(--color-on-ink-muted);
+}
+
+.contact__availability {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid var(--color-ink-border);
+  border-radius: var(--radius-pill);
+  color: var(--color-on-ink);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.contact__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4ADE80;
+  box-shadow: 0 0 0 3px rgb(74 222 128 / 0.2);
+}
+
+.contact__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+/* Boutons secondaires lisibles sur fond encre */
+.contact .btn--secondary {
+  border-color: var(--color-on-ink-muted);
+  color: var(--color-on-ink);
+}
+
+.contact .btn--secondary:hover {
+  border-color: var(--color-on-ink);
+  background: var(--color-on-ink);
+  color: var(--color-ink);
+}
+
+.contact :focus-visible {
+  outline-color: var(--color-accent-on-ink);
+}
+
 /* Chiffres clés */
 .figures {
   display: grid;
@@ -205,6 +268,12 @@
 @media (min-width: 768px) {
   .figures {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 768px) {
+  .contact {
+    padding: var(--space-8) var(--space-7);
   }
 }
 

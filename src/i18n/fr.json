@@ -1,25 +1,8 @@
 {
-  "contact": {
-    "title": "Me contacter",
-    "subtitle": "Discutons de vos besoins ou d'une collaboration.",
-    "label_email": "Adresse email",
-    "placeholder_email": "ex. contact@mail.com",
-    "label_message": "Votre message",
-    "placeholder_message": "Écrivez votre message…",
-    "send": "Envoyer",
-    "sending": "Envoi en cours…",
-    "success": "Message envoyé ! Je vous répondrai sous 48h.",
-    "error": "Erreur lors de l'envoi. Réessayez ou contactez-moi directement.",
-    "err_email_required": "L'email est requis.",
-    "err_email_invalid": "Format d'email invalide.",
-    "err_msg_required": "Le message est requis.",
-    "err_msg_minlength": "Au moins 10 caractères."
-  },
   "footer": {
     "rights": "Tous droits réservés.",
     "built_with": "Construit avec Angular, pré-rendu SSR.",
-    "links": "Liens",
-    "email": "E-mail"
+    "links": "Liens"
   },
   "not_found": {
     "title": "Page introuvable",
@@ -38,7 +21,6 @@
     "roles_label": "Voir mon profil de",
     "switch_lang": "Switch to English",
     "links": "Liens",
-    "email": "E-mail",
     "menu": "Menu",
     "open_menu": "Ouvrir le menu",
     "close_menu": "Fermer le menu"
@@ -92,6 +74,22 @@
     "method_eyebrow": "Un cadre réutilisable, d’un secteur à l’autre",
     "method_title": "Ma méthode",
     "method_lead": "Neuf étapes, chacune avec son livrable et sa question de contrôle, éprouvées sur la transformation de Christ International Group.",
-    "method_cta": "Découvrir la méthode"
+    "method_cta": "Découvrir la méthode",
+    "contact_eyebrow": "Travaillons ensemble",
+    "contact_title": "Contact",
+    "contact_lead": "Un poste, une mission ou une question sur l’un de ces projets : écrivez-moi sur LinkedIn.",
+    "contact_cv": "Télécharger mon CV"
+  },
+  "method": {
+    "eyebrow": "Un cadre réutilisable, d’un secteur à l’autre",
+    "title": "Ma méthode en 9 étapes",
+    "lead": "De l’avant-vente à la mise en production : pour chaque étape, ce que je livre, la question qui me sert de garde-fou, et ce que cela a donné sur la transformation de Christ International Group.",
+    "deliverable": "Livrable",
+    "question": "Question de contrôle",
+    "example": "Sur le projet CIG",
+    "sector_title": "D’un secteur à l’autre",
+    "changes": "Ce qui change",
+    "constants": "Ce qui ne change pas",
+    "cta_case": "Lire l’étude de cas CIG"
   }
 }

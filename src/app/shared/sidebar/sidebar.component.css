@@ -59,6 +59,27 @@
   color: var(--color-on-ink-muted);
 }
 
+/* Disponibilité */
+.availability {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  margin: 0;
+  color: var(--color-on-ink);
+  font-size: var(--text-sm);
+  font-weight: 500;
+}
+
+.availability__dot {
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  margin-top: 0.45em;
+  border-radius: 50%;
+  background: #4ADE80;
+  box-shadow: 0 0 0 3px rgb(74 222 128 / 0.2);
+}
+
 /* Navigation */
 .sidebar__nav {
   display: flex;
