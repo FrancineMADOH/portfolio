@@ -18,7 +18,7 @@ npm install
 ng serve
 ```
 
-Ouvrir [http://localhost:4200](http://localhost:4200).
+Puis ouvrir l’adresse affichée par `ng serve`.
 
 ## Build de production
 

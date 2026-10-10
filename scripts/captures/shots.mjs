@@ -18,9 +18,9 @@
 
 /**
  * Connexion au back-office local (instance de démonstration). Aucun identifiant dans le dépôt :
- * ODOO_URL, ODOO_LOGIN et ODOO_PASSWORD sont lus dans l'environnement au lancement.
+ * ODOO_URL, ODOO_DB, ODOO_LOGIN et ODOO_PASSWORD sont lus dans l'environnement au lancement.
  */
-const ODOO_URL = process.env.ODOO_URL || 'http://localhost:8070';
+const ODOO_URL = process.env.ODOO_URL ?? '';
 
 export const SESSIONS = {
   bwfreight: {

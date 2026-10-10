@@ -37,8 +37,8 @@ async function login(browser, sessionName) {
   if (!session) {
     throw new Error(`Session « ${sessionName} » absente de SESSIONS dans shots.mjs.`);
   }
-  if (!session.login || !session.password) {
-    throw new Error('Identifiants manquants : définir ODOO_LOGIN et ODOO_PASSWORD dans l’environnement.');
+  if (!process.env.ODOO_URL || !session.login || !session.password) {
+    throw new Error('Connexion incomplète : définir ODOO_URL, ODOO_LOGIN et ODOO_PASSWORD dans l’environnement.');
   }
   const page = await browser.newPage();
   try {
