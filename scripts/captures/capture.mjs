@@ -5,7 +5,7 @@
 //   npm run captures -- --only brightwill   seulement les captures d'un projet
 //
 // Les captures du back-office (session « bwfreight ») demandent l'instance locale lancée :
-// conteneur bwcore_app, http://localhost:8070. Identifiants : ODOO_LOGIN / ODOO_PASSWORD.
+// instance locale lancée. Variables : ODOO_URL, ODOO_DB, ODOO_LOGIN, ODOO_PASSWORD (jamais dans le dépôt).
 //
 // Chrome utilisé : CHROME_PATH, sinon /usr/bin/google-chrome. Les fichiers existants sont remplacés.
 
@@ -36,6 +36,9 @@ async function login(browser, sessionName) {
   const session = SESSIONS[sessionName];
   if (!session) {
     throw new Error(`Session « ${sessionName} » absente de SESSIONS dans shots.mjs.`);
+  }
+  if (!session.login || !session.password) {
+    throw new Error('Identifiants manquants : définir ODOO_LOGIN et ODOO_PASSWORD dans l’environnement.');
   }
   const page = await browser.newPage();
   try {

@@ -2,7 +2,7 @@ import { L10n } from './models';
 
 // La méthode en 9 étapes (F5.7, détaillée en F6.1). Exemples tirés de lecons-apprises.md (projet CIG),
 // sans détail technique interne ni sujet écarté du site (prix, ventes et caisses, SMTP).
-// Source : /home/madoh/Desktop/devprojects/pbccg/lecons-apprises.md, section 12 « Le framework en une page ».
+// Source : leçons apprises du projet CIG, section 12 « Le framework en une page ».
 
 export interface MethodStep {
   id: string;

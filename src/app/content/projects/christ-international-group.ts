@@ -1,7 +1,7 @@
 import { CaseStudy } from '../models';
 
 // Étude de cas rédigée en F3.1 (2026-10-09). Faits confirmés uniquement.
-// Sources (dossier /home/madoh/Desktop/devprojects/pbccg) :
+// Sources (documents du projet CIG) :
 //   - fourre_tout/diagnostic-digital-CIG.md : diagnostic sur 3 axes, principe « standard d'abord », feuille de route en 3 phases
 //   - fourre_tout/CIG_PROPOSITION_SITE_WEB.md (BW-CIG-2026-002) et CIG_PROPOSITION_BRIGHTFRET.md (BW-CIG-2026-003) : propositions
 //   - plan-dev-bw_cig_website.md : 57 fonctionnalités, phases 0 à 18, critères d'acceptation

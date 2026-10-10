@@ -1,0 +1,53 @@
+# Déploiement du portfolio sur GitHub Pages à chaque push sur main (F9.2).
+# Le site est entièrement pré-rendu : aucun serveur Node, seulement des fichiers statiques.
+name: Déploiement GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Un seul déploiement à la fois ; celui en cours n'est pas annulé.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Installation des dépendances
+        run: npm ci
+
+      - name: Build de production (pré-rendu)
+        run: npx ng build --configuration production
+
+      # URL inconnue : GitHub Pages sert 404.html ; la version sans pré-rendu laisse le routeur afficher la page 404.
+      - name: Page 404
+        run: cp dist/francinemadoh/browser/index.csr.html dist/francinemadoh/browser/404.html
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist/francinemadoh/browser
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

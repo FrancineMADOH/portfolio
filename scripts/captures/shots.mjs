@@ -17,14 +17,16 @@
 //   scale      densité de pixels (ex. 2 pour un petit élément net, comme une étiquette)
 
 /**
- * Connexions aux applications locales. Base de test uniquement : les identifiants par défaut
- * sont ceux de la base de démonstration locale, à surcharger avec ODOO_LOGIN / ODOO_PASSWORD.
+ * Connexion au back-office local (instance de démonstration). Aucun identifiant dans le dépôt :
+ * ODOO_URL, ODOO_LOGIN et ODOO_PASSWORD sont lus dans l'environnement au lancement.
  */
+const ODOO_URL = process.env.ODOO_URL || 'http://localhost:8070';
+
 export const SESSIONS = {
   bwfreight: {
-    url: 'http://localhost:8070/web/login?db=bwfreight',
-    login: process.env.ODOO_LOGIN || 'admin',
-    password: process.env.ODOO_PASSWORD || 'admin'
+    url: `${ODOO_URL}/web/login?db=${process.env.ODOO_DB ?? ''}`,
+    login: process.env.ODOO_LOGIN,
+    password: process.env.ODOO_PASSWORD
   }
 };
 
@@ -60,12 +62,12 @@ export const SHOTS = [
   // F2.3 — Back-office BrightFret et PWA opérateurs (instance locale bwfreight, données de test).
   // Expédition 60 = client de test (sophie.nkoulou@example.com), 11 étapes de transit.
   // Pas de rapport de suivi : sans Twilio sur la base de test, toute sa colonne SMS affiche « Failed ».
-  { slug: 'christ-international-group', name: 'bo-expeditions', session: 'bwfreight', url: 'http://localhost:8070/odoo/action-bw_freight_management.action_freight_shipment', viewports: ['desktop'], waitFor: '.o_list_renderer', waitMs: 800, click: ['.o_searchview_facet .o_facet_remove'], blur: BO_PERSONAL_DATA },
-  { slug: 'christ-international-group', name: 'bo-expedition', session: 'bwfreight', url: 'http://localhost:8070/odoo/action-bw_freight_management.action_freight_shipment/60', viewports: ['desktop'], waitFor: '.o_form_view', waitMs: 800, hide: BO_CHATTER, blur: BO_PERSONAL_DATA },
-  { slug: 'christ-international-group', name: 'bo-expedition-suivi', session: 'bwfreight', url: 'http://localhost:8070/odoo/action-bw_freight_management.action_freight_shipment/60', viewports: ['desktop'], waitFor: '.o_form_view', waitMs: 800, click: ['.o_notebook a[name="tracking"]'], scrollTo: '.o_notebook', hide: [...BO_CHATTER, ...BO_TEST_COLUMNS], blur: BO_PERSONAL_DATA },
-  { slug: 'christ-international-group', name: 'bo-manifeste', session: 'bwfreight', url: 'http://localhost:8070/odoo/action-bw_freight_management.action_freight_manifest/1', viewports: ['desktop'], waitFor: '.o_form_view', waitMs: 800, hide: BO_CHATTER, blur: BO_PERSONAL_DATA },
-  { slug: 'christ-international-group', name: 'bo-reclamation', session: 'bwfreight', url: 'http://localhost:8070/odoo/action-bw_freight_management.action_freight_claim/42', viewports: ['desktop'], waitFor: '.o_form_view', waitMs: 800, hide: BO_CHATTER, blur: BO_PERSONAL_DATA },
-  { slug: 'christ-international-group', name: 'pwa-ops', session: 'bwfreight', url: 'http://localhost:8070/ops', viewports: ['mobile'], waitMs: 1500 },
-  { slug: 'christ-international-group', name: 'pwa-ops-bordereaux', session: 'bwfreight', url: 'http://localhost:8070/ops', viewports: ['mobile'], waitMs: 1500, click: ['.ops-bottom-nav .ops-nav-btn:nth-of-type(2)'] },
-  { slug: 'christ-international-group', name: 'rapport-etiquette', session: 'bwfreight', url: 'http://localhost:8070/report/html/bw_freight_management.report_freight_label_document/60', viewports: ['desktop'], waitMs: 500, element: '.bwl-page', scale: 2 }
+  { slug: 'christ-international-group', name: 'bo-expeditions', session: 'bwfreight', url: `${ODOO_URL}/odoo/action-bw_freight_management.action_freight_shipment`, viewports: ['desktop'], waitFor: '.o_list_renderer', waitMs: 800, click: ['.o_searchview_facet .o_facet_remove'], blur: BO_PERSONAL_DATA },
+  { slug: 'christ-international-group', name: 'bo-expedition', session: 'bwfreight', url: `${ODOO_URL}/odoo/action-bw_freight_management.action_freight_shipment/60`, viewports: ['desktop'], waitFor: '.o_form_view', waitMs: 800, hide: BO_CHATTER, blur: BO_PERSONAL_DATA },
+  { slug: 'christ-international-group', name: 'bo-expedition-suivi', session: 'bwfreight', url: `${ODOO_URL}/odoo/action-bw_freight_management.action_freight_shipment/60`, viewports: ['desktop'], waitFor: '.o_form_view', waitMs: 800, click: ['.o_notebook a[name="tracking"]'], scrollTo: '.o_notebook', hide: [...BO_CHATTER, ...BO_TEST_COLUMNS], blur: BO_PERSONAL_DATA },
+  { slug: 'christ-international-group', name: 'bo-manifeste', session: 'bwfreight', url: `${ODOO_URL}/odoo/action-bw_freight_management.action_freight_manifest/1`, viewports: ['desktop'], waitFor: '.o_form_view', waitMs: 800, hide: BO_CHATTER, blur: BO_PERSONAL_DATA },
+  { slug: 'christ-international-group', name: 'bo-reclamation', session: 'bwfreight', url: `${ODOO_URL}/odoo/action-bw_freight_management.action_freight_claim/42`, viewports: ['desktop'], waitFor: '.o_form_view', waitMs: 800, hide: BO_CHATTER, blur: BO_PERSONAL_DATA },
+  { slug: 'christ-international-group', name: 'pwa-ops', session: 'bwfreight', url: `${ODOO_URL}/ops`, viewports: ['mobile'], waitMs: 1500 },
+  { slug: 'christ-international-group', name: 'pwa-ops-bordereaux', session: 'bwfreight', url: `${ODOO_URL}/ops`, viewports: ['mobile'], waitMs: 1500, click: ['.ops-bottom-nav .ops-nav-btn:nth-of-type(2)'] },
+  { slug: 'christ-international-group', name: 'rapport-etiquette', session: 'bwfreight', url: `${ODOO_URL}/report/html/bw_freight_management.report_freight_label_document/60`, viewports: ['desktop'], waitMs: 500, element: '.bwl-page', scale: 2 }
 ];

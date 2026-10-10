@@ -27,11 +27,6 @@ export const routes: Routes = [
     path: 'methode',
     loadComponent: () => import('./pages/method/method.component').then(m => m.MethodComponent)
   },
-  // Page de démonstration du design system (F0.3), retirée en F9.1
-  {
-    path: '_styleguide',
-    loadComponent: () => import('./pages/styleguide/styleguide.component').then(m => m.StyleguideComponent)
-  },
   {
     path: '**',
     loadComponent: () => import('./pages/not-found/not-found.component').then(m => m.NotFoundComponent)

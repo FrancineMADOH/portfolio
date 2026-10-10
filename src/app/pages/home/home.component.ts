@@ -9,7 +9,7 @@ import { PROJECTS } from '../../content/projects';
 import { DEFAULT_ROLE, findRole, ROLES } from '../../content/roles';
 import { LanguageService } from '../../services/language.service';
 import { RoleService } from '../../services/role.service';
-import { SeoService } from '../../services/seo.service';
+import { SITE_URL, SeoService } from '../../services/seo.service';
 import { JourneyComponent } from './journey.component';
 import { ProjectCardComponent } from './project-card.component';
 import { SkillsComponent } from './skills.component';
@@ -63,7 +63,18 @@ export class HomeComponent {
         description: role.pitch[lang],
         path,
         canonicalPath: role.id === DEFAULT_ROLE ? '/' : path,
-        lang
+        lang,
+        jsonLd: {
+          '@context': 'https://schema.org',
+          '@type': 'Person',
+          name: 'Francine MADOH',
+          jobTitle: role.title[lang],
+          url: SITE_URL,
+          image: `${SITE_URL}/images/profile.webp`,
+          sameAs: [PROFILE_LINKS.linkedin, PROFILE_LINKS.github],
+          knowsAbout: ['Transformation digitale', 'Gestion de projet', 'Analyse fonctionnelle', 'Odoo', 'Angular', 'Node.js', 'Python'],
+          address: { '@type': 'PostalAddress', addressCountry: 'FR' }
+        }
       });
     });
   }

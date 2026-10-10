@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Pages pré-rendues du portfolio (F8.2). /profil/consultante est absent : sa page canonique est /. À mettre à jour si une route est ajoutée. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://portfolio.isfranny.net/</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://portfolio.isfranny.net/profil/cheffe-de-projet</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://portfolio.isfranny.net/profil/business-analyst</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://portfolio.isfranny.net/profil/odoo</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://portfolio.isfranny.net/profil/developpeuse</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://portfolio.isfranny.net/projets/christ-international-group</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://portfolio.isfranny.net/projets/brightwill</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://portfolio.isfranny.net/projets/nomoresilent</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://portfolio.isfranny.net/projets/mungoum</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://portfolio.isfranny.net/methode</loc><lastmod>2026-10-10</lastmod></url>
+</urlset>

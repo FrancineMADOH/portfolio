@@ -1,7 +1,7 @@
 import { CaseStudy } from '../models';
 
 // Étude de cas rédigée en F3.3 (2026-10-09). Faits confirmés uniquement.
-// Sources (dossier /home/madoh/Desktop/devprojects/nomoresilent) :
+// Sources (dépôt du projet NoMoreSilent) :
 //   - CLAUDE.md : parcours anonyme victime / témoin, règles d'anonymat (aucun IP, GPS chiffré AES-256, EXIF supprimé),
 //     routage par zone et catégorie, portails organisations et admin, abstraction LLM 4 fournisseurs (Groq en production),
 //     Angular 21 zoneless + Tailwind, Express / TypeScript, PostgreSQL, 269 tests Jest, CI GitHub Actions, accessibilité

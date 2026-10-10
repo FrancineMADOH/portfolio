@@ -1,7 +1,7 @@
 import { CaseStudy } from '../models';
 
 // Étude de cas rédigée en F3.4 (2026-10-09). Faits confirmés uniquement.
-// Sources (dossier /home/madoh/Desktop/devprojects/mungoum) :
+// Sources (dépôt du projet Mungoum) :
 //   - CLAUDE.md : calendrier nguemba à 8 jours du village de Bamougoum (Ouest Cameroun), 100 % hors ligne,
 //     algorithme ancré sur le PDF officiel, FR / EN, AdMob avec consentement RGPD, thèmes clair et sombre, phases 2 et 3
 //   - DIAGNOSTIC.md / DEVPLAN.md : décisions produit, fonctionnalités F0 à F10 avec critères d'acceptation

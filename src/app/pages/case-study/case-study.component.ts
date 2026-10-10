@@ -95,6 +95,7 @@ export class CaseStudyComponent {
         title: `${p.title[lang]} · Francine MADOH`,
         description: p.summary[lang],
         path: `/projets/${p.slug}`,
+        image: `/images/og/${p.slug}.jpg`,
         lang
       });
     });

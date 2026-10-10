@@ -1,7 +1,7 @@
 import { CaseStudy } from '../models';
 
 // Étude de cas rédigée en F3.2 (2026-10-09). Faits confirmés uniquement, recentrée sur le produit.
-// Sources (dossier /home/madoh/Desktop/siteweb) :
+// Sources (documents du projet BrightWill) :
 //   - CLAUDE.md : 3 offres (ERP géré, BrightFret, sur-mesure), site bilingue EN / FR, 8 phases, 6 modèles back-office,
 //     aucun appel réseau externe, page de politique de confidentialité de l'app, marque blanche
 //   - 05-plan-dev-bw_website.md : 34 fonctionnalités avec critères d'acceptation

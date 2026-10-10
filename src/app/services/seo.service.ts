@@ -5,7 +5,7 @@ import { Meta, Title } from '@angular/platform-browser';
 import { Lang } from '../content/models';
 
 /** Adresse publique du site, pour les URL absolues (canonique, Open Graph). */
-export const SITE_URL = 'https://francinemadoh.isfranny.net';
+export const SITE_URL = 'https://portfolio.isfranny.net';
 
 const SITE_NAME = 'Francine MADOH';
 
@@ -19,7 +19,14 @@ export interface PageSeo {
   lang: Lang;
   /** Page à ne pas indexer (404). */
   noindex?: boolean;
+  /** Image de partage, chemin depuis `public/` (1200 × 630). Par défaut : image générale. */
+  image?: string;
+  /** Données structurées schema.org de la page (JSON-LD), ou rien. */
+  jsonLd?: object;
 }
+
+const DEFAULT_IMAGE = '/images/og/default.jpg';
+const JSON_LD_ID = 'page-json-ld';
 
 /**
  * Titre, description, URL canonique et balises de partage (Open Graph, Twitter) de la page.
@@ -44,17 +51,38 @@ export class SeoService {
     this.meta.updateTag({ property: 'og:title', content: page.title });
     this.meta.updateTag({ property: 'og:description', content: page.description });
     this.meta.updateTag({ property: 'og:url', content: url });
-    this.meta.updateTag({ name: 'twitter:card', content: 'summary' });
+    const image = SITE_URL + (page.image ?? DEFAULT_IMAGE);
+    this.meta.updateTag({ property: 'og:image', content: image });
+    this.meta.updateTag({ property: 'og:image:width', content: '1200' });
+    this.meta.updateTag({ property: 'og:image:height', content: '630' });
+    this.meta.updateTag({ property: 'og:image:alt', content: page.title });
+    this.meta.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
+    this.meta.updateTag({ name: 'twitter:image', content: image });
     this.meta.updateTag({ name: 'twitter:title', content: page.title });
     this.meta.updateTag({ name: 'twitter:description', content: page.description });
 
     this.setCanonical(canonical);
+
+    this.setJsonLd(page.jsonLd);
 
     if (page.noindex) {
       this.meta.updateTag({ name: 'robots', content: 'noindex' });
     } else {
       this.meta.removeTag('name="robots"');
     }
+  }
+
+  /** Un seul bloc JSON-LD par page : remplacé à chaque navigation, retiré si la page n'en a pas. */
+  private setJsonLd(data: object | undefined): void {
+    this.document.getElementById(JSON_LD_ID)?.remove();
+    if (!data) {
+      return;
+    }
+    const script = this.document.createElement('script');
+    script.id = JSON_LD_ID;
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(data);
+    this.document.head.appendChild(script);
   }
 
   private setCanonical(href: string): void {

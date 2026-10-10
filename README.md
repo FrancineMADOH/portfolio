@@ -1,17 +1,15 @@
 # Portfolio — Francine MADOH
 
-Portfolio personnel de Francine MADOH, développeuse Fullstack TypeScript · Python · Odoo · Flutter.
+Portfolio de Francine MADOH : consultante en transformation digitale, cheffe de projet, analyste fonctionnelle, consultante Odoo et développeuse Angular · Node.js · Python/Odoo.
 
-Site en production : **[francinemadoh.isfranny.net](https://francinemadoh.isfranny.net)**
+Site en ligne : **[portfolio.isfranny.net](https://portfolio.isfranny.net)**
 
 ## Stack
 
-- **Framework** : Angular 19 (standalone components, signals)
-- **UI** : Bootstrap 5 (grid uniquement) + CSS custom properties (dark theme)
-- **i18n** : ngx-translate v18 — bilingue FR / EN
-- **Contact** : FormSubmit.co (aucun backend)
-- **Données projets** : JSON statique (`public/data/projects.json`)
-- **Déployé** : VPS Ubuntu + nginx + Let's Encrypt
+- **Framework** : Angular 19 (composants standalone, signaux), pré-rendu statique avec `@angular/ssr` (aucun serveur Node en production)
+- **Design** : CSS custom properties, polices auto-hébergées, aucune ressource externe
+- **i18n** : ngx-translate v18 pour l'interface, contenu typé bilingue `{ fr, en }` dans `src/app/content/`
+- **Hébergement** : GitHub Pages, déployé par GitHub Actions à chaque push sur `main`
 
 ## Lancer en local
 
@@ -22,27 +20,34 @@ ng serve
 
 Ouvrir [http://localhost:4200](http://localhost:4200).
 
-## Build production
+## Build de production
 
 ```bash
 ng build --configuration production
-# output : dist/francinemadoh/browser/
+# sortie : dist/francinemadoh/browser/ (pages pré-rendues)
 ```
+
+## Outils
+
+```bash
+npm run captures   # captures d'écran des projets (scripts/captures/)
+npm run og         # images de partage 1200 × 630 (scripts/og/)
+```
+
+Les captures du back-office lisent leurs identifiants dans l'environnement (`ODOO_URL`, `ODOO_DB`, `ODOO_LOGIN`, `ODOO_PASSWORD`) : aucun identifiant n'est stocké dans le dépôt.
 
 ## Structure
 
 ```
-src/
-├── app/
-│   ├── pages/projects/      # Page principale (Hero, Skills, Projects, Contact)
-│   ├── shared/navbar/       # Navbar + switcher FR/EN
-│   ├── shared/footer/
-│   ├── services/            # ProjectService, ContactService, LanguageService
-│   └── models/
-├── styles.css               # Design tokens CSS
-public/
-├── data/projects.json       # 6 projets
-├── i18n/fr.json             # Traductions françaises
-└── i18n/en.json             # Traductions anglaises
+src/app/
+├── content/        # Contenu bilingue : études de cas, rôles, parcours, compétences, IA, méthode
+├── pages/          # Accueil (par rôle), étude de cas, méthode, 404
+├── shared/         # Barre latérale, pied de page, cadre de téléphone, badge Google Play
+└── services/       # Langue, rôle actif, SEO
+src/i18n/           # Libellés de l'interface (fr, en)
+public/             # Polices, images, CV, sitemap, robots, CNAME
 ```
-rsync -avz --delete dist/francinemadoh/browser/ root@212.132.114.37:/var/www/francinemadoh/
+
+## Déploiement
+
+Automatique : `.github/workflows/deploy.yml` construit le site et le publie sur GitHub Pages à chaque push sur `main`. Le domaine personnalisé est déclaré dans `public/CNAME`.

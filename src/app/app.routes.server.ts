@@ -14,9 +14,7 @@ export const serverRoutes: ServerRoute[] = [
     renderMode: RenderMode.Prerender,
     getPrerenderParams: async () => PROJECT_SLUGS.map(slug => ({ slug }))
   },
-  // Page de démonstration du design system (F0.3) : jamais pré-rendue, retirée en F9.1
-  { path: '_styleguide', renderMode: RenderMode.Client },
-  // URL inconnue : servie par nginx avec index.csr.html, le routeur client affiche la 404
+  // URL inconnue : l'hébergeur sert 404.html (copie de index.csr.html), le routeur client affiche la page 404
   { path: '**', renderMode: RenderMode.Client },
   { path: '', renderMode: RenderMode.Prerender },
   { path: 'methode', renderMode: RenderMode.Prerender }

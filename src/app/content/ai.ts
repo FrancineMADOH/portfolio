@@ -1,7 +1,7 @@
 import { L10n } from './models';
 
 // L'IA comme levier (F5.6) : uniquement des usages prouvés, chacun relié à sa preuve sur le site.
-// Sources : CV et décision de Francine du 2026-10-09 (Zetos : analyse d’un appel d’offres de 4-6 h à 2 h), pbccg/lecons-apprises.md (Whisper, skills, CLAUDE.md), étude de cas NoMoreSilent.
+// Sources : CV et décision de Francine du 2026-10-09 (Zetos : analyse d’un appel d’offres de 4-6 h à 2 h), leçons apprises du projet CIG (Whisper, skills, CLAUDE.md), étude de cas NoMoreSilent.
 
 export interface AiUsage {
   id: string;
